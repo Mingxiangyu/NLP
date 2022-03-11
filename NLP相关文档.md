@@ -82,12 +82,14 @@ PS：如果你有其他会话正在运行，可能会看到这样的提示:
 
 不能用Linux下常用的`cd`命令，要用如下命令:
 
-加载盘
+ 1.加载盘
 
 ```python
 from google.colab import drive
 drive.mount('/content/drive/')
 ```
+
+ 2.切换到你要跑的目录下面
 
 ~~~python 
 # 指定当前的工作文件夹
@@ -96,6 +98,6 @@ import os
 os.chdir("/content/drive/My Drive/your_path")
 ~~~
 
-装载Google云盘文件
+## 装载Google云盘文件
 
 ![image-20220311114930181](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/image-20220311114930181.png)
