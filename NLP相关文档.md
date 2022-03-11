@@ -1,15 +1,6 @@
 # [Colab使用教程](https://my.oschina.net/u/4339899/blog/3434699)
 
-> 1. Google Colaboratory是谷歌提供的基于linux系统的免费云平台并支持免费的 GPU，内部已经集成了深度学习所需要的库，比如Tensorflow（目前Version：2.2.0rc3）和Keras（目前Version: 2.3.1）等，一般情况下无需我们再做配置，直接上传自己代码就能用了。
->
-> 2. Colab 是Google的且服务器在国外
->
->    如果不能使用Google，推荐使用Kaggle（国内也能访问）👉 [免费的深度学习GPU环境Colab和Kaggle搭配使用](https://www.cnblogs.com/zgqcn/p/13475630.html#kaggle)
->    如果可以上Google，那就继续往下看学习Colab用法！如何进入Colab
-
->  推荐大家使用 Google云端硬盘上传文件然后加载到自己的Colab里。
-
-学习[深度学习](https://cuijiahua.com/blog/tag/深度学习/)算法，**需要有 GPU**，也就是显卡。
+最近在学习NLP，但是学习[深度学习](https://cuijiahua.com/blog/tag/深度学习/)算法，需要有 **GPU**，也就是显卡。
 
 而显卡，需要是 NVIDIA 的显卡，也就是我们俗称的 N 卡。
 
@@ -37,6 +28,17 @@
 好在有百度，直接搜索关键词「pytorch修改代码为cpu」，其他框架同理，教程非常多。
 
 自己没有 GPU，但是我就想用！可以！引出文本的**重点**，教你如何「白嫖 GPU」。
+
+以下为总结出
+
+> 1. Google Colaboratory是谷歌提供的基于linux系统的免费云平台并支持免费的 GPU，内部已经集成了深度学习所需要的库，比如Tensorflow（目前Version：2.2.0rc3）和Keras（目前Version: 2.3.1）等，一般情况下无需我们再做配置，直接上传自己代码就能用了。
+>
+> 2. Colab 是Google的且服务器在国外
+>
+>    如果不能使用Google，推荐使用Kaggle（国内也能访问）👉 [免费的深度学习GPU环境Colab和Kaggle搭配使用](https://www.cnblogs.com/zgqcn/p/13475630.html#kaggle)
+>    如果可以上Google，那就继续往下看学习Colab用法！如何进入Colab
+
+>  推荐大家使用 Google云端硬盘上传文件然后加载到自己的Colab里。
 
 ## Colab的基本配置
 
