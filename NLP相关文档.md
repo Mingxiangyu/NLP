@@ -25,7 +25,7 @@
 
 ![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZsYWdfaW5n,size_16,color_FFFFFF,t_70.png)
 
-具体一些区域的功能已经在图上注释了，大家可以先了解下。首先当然是先入门hello world啦~如下所示，在代码框里输入print("hello world!")，然后点击左边的运行按钮就可以
+具体一些区域的功能已经在图上注释了，大家可以先了解下。首先是先入门hello world，如下所示，在代码框里输入print("hello world!")，然后点击左边的运行按钮就可以
 
 ![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZsYWdfaW5n,size_16,color_FFFFFF,t_70-20220311113155289.png)
 
