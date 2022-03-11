@@ -98,13 +98,17 @@ import os
 os.chdir("/content/drive/My Drive/your_path")
 ~~~
 
+### 安装Pytorch以及torchvision
+
+Colab 一般情况下已经自带了pytorch环境了。若没有可以进行相应的安装：
+
 ## 装载Google云盘文件
 
 ![image-20220311114930181](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/image-20220311114930181.png)
 
 装载完成之后的界面如下： 
 
-![img](https://img-blog.csdnimg.cn/2020050113471425.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZsYWdfaW5n,size_16,color_FFFFFF,t_70)
+![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZsYWdfaW5n,size_16,color_FFFFFF,t_70-20220311171446877.png)
 
 ## 解决Colab长时间无操作就掉线的问题
 
