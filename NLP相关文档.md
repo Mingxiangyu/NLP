@@ -118,3 +118,6 @@ function ClickConnect(){
 setInterval(ClickConnect, 60000)
 ```
 
+把上面这段代码添加到下图所示的位置 ，然后敲一下回车键即可
+
+![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZsYWdfaW5n,size_16,color_FFFFFF,t_70-20220311171313588.png)
