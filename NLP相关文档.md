@@ -15,3 +15,11 @@
 不过现在莫要着急嘛，咱先把自己的工程代码上传到个人的文件夹中，这里我的叫test（我上传到test里的文件夹叫yolo3-keras，后面的栗子会用到）。
 
 步骤为：`双击test文件夹-->进去后右键-->上传文件/上传文件夹-->根据需要上传自己的代码文件或文件夹`，上传时间长短视网络情况而定。完成这一步之后，我们就可以开始快乐的操作Colab啦~
+
+## Colab如何操作？
+
+> 在**步骤二**的基础上，我们双击自己建立的Colab，进去之后它长这样：
+
+![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZsYWdfaW5n,size_16,color_FFFFFF,t_70.png)
+
+具体一些区域的功能已经在图上注释了，大家可以先了解下。首先当然是先入门hello world啦~如下所示，在代码框里输入print("hello world!")，然后点击左边的运行按钮就可以啦~~
