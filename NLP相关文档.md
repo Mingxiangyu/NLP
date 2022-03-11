@@ -74,4 +74,13 @@ else:
 ![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/77574856ca06fc9a771dcd1dddbef5504b9.png)
 
 PS：如果你有其他会话正在运行，可能会看到这样的提示:
-![img](https://oscimg.oschina.net/oscnet/36b38caf0d03210e0dde46157ad1c787041.png)
+![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/36b38caf0d03210e0dde46157ad1c787041.png)
+
+### 切换文件夹
+
+不能用Linux下常用的`cd`命令，要用如下命令:
+
+~~~python 
+import os os.chdir("/content/drive/My Drive/your_path")
+~~~
+
