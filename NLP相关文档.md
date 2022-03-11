@@ -21,7 +21,7 @@
 
 ## Colab如何操作？
 
-> 在**步骤二**的基础上，我们双击自己建立的Colab，进去之后它长这样：
+在**步骤二**的基础上，我们双击自己建立的Colab，进去之后它长这样：
 
 ![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZsYWdfaW5n,size_16,color_FFFFFF,t_70.png)
 
@@ -86,3 +86,6 @@ PS：如果你有其他会话正在运行，可能会看到这样的提示:
 import os os.chdir("/content/drive/My Drive/your_path")
 ~~~
 
+装载Google云盘文件
+
+![image-20220311114930181](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/image-20220311114930181.png)
