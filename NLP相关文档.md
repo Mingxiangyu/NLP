@@ -59,3 +59,19 @@ else:
 
 ![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/6bb31b60b0606798eb1df8a2a312c063177.png)
 
+或者使用命令:
+
+~~~shell
+!nvidia-smi
+~~~
+
+可以看到以下结果：
+
+![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/1410231-20190818231722902-460103915.png)
+
+否则看到如下结果：
+
+![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/77574856ca06fc9a771dcd1dddbef5504b9.png)
+
+PS：如果你有其他会话正在运行，可能会看到这样的提示:
+![img](https://oscimg.oschina.net/oscnet/36b38caf0d03210e0dde46157ad1c787041.png)
