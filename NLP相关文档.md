@@ -89,6 +89,8 @@ from google.colab import drive
 drive.mount('/content/drive/')
 ```
 
+![fs](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/1538832-20190714230932384-1359631752.png)
+
  2.切换到你要跑的目录下面
 
 ~~~python 
@@ -101,6 +103,12 @@ os.chdir("/content/drive/My Drive/your_path")
 ### 安装Pytorch以及torchvision
 
 Colab 一般情况下已经自带了pytorch环境了。若没有可以进行相应的安装：
+
+```python
+!pip install torch torchvision  # 在Colab中执行操作语句时，感叹号不能漏
+```
+
+
 
 ## 装载Google云盘文件
 
