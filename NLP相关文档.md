@@ -106,5 +106,15 @@ os.chdir("/content/drive/My Drive/your_path")
 
 使用中会发现，当我们在训练模型的时候，如果长时间不操作Colab后他就会自动断线，这就很头疼了，我们也不能傻傻一直盯着它跑吧。莫慌，你可以通过以下简单的操作来解决：
 
-> # How to prevent Google Colab from disconnecting ?
+> [# How to prevent Google Colab from disconnecting ?](https://medium.com/@shivamrawat_756/how-to-prevent-google-colab-from-disconnecting-717b88a128c0)
+
+首先在Colab界面打开控制台（快捷键Ctrl+Shift+I），然后复制以下代码（这段代码的功能是设置每隔60000ms也就是1min自动点击一下Colab的“连接”操作，这样就不至于长时间误操作而导致自动断开连接啦，当然这只是个例子，方法不唯一，大家也可以调整下自己的间隔时间）：
+
+```shell
+function ClickConnect(){
+    console.log("Working");
+    document.querySelector("colab-toolbar-button#connect").click()
+}
+setInterval(ClickConnect, 60000)
+```
 
