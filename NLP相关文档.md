@@ -101,3 +101,8 @@ os.chdir("/content/drive/My Drive/your_path")
 ## 装载Google云盘文件
 
 ![image-20220311114930181](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/image-20220311114930181.png)
+
+## 解决Colab长时间无操作就掉线的问题
+
+使用中会发现，当我们在训练自己的模型的时候，如果长时间不操作Colab后他就会自动断线，这就很头疼了，我们也不能傻傻一直盯着它跑吧。莫慌，你可以通过以下简单的操作来解决：
+
