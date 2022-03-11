@@ -83,7 +83,10 @@ PS：如果你有其他会话正在运行，可能会看到这样的提示:
 不能用Linux下常用的`cd`命令，要用如下命令:
 
 ~~~python 
-import os os.chdir("/content/drive/My Drive/your_path")
+# 指定当前的工作文件夹
+import os 
+# 此处为google drive中的文件路径,drive为之前指定的工作根目录，要加上
+os.chdir("/content/drive/My Drive/your_path")
 ~~~
 
 装载Google云盘文件
