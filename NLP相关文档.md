@@ -40,6 +40,8 @@
 
 ![image-20220311113541370](../../Library/Application Support/typora-user-images/image-20220311113541370.png)
 
+![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/459651-20190220093759669-715713462.png)
+
 然后运行以下代码确认GPU是否正常运行
 
 ```python
