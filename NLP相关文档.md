@@ -9,6 +9,8 @@
 
 >  推荐大家使用 Google云端硬盘上传文件然后加载到自己的Colab里。
 
+## Colab的基本配置
+
 首先你得注册个`Google账号-->Google搜索“Google 云端硬盘”-->个人 转至Google云端硬盘`，然后你就可以看到以下界面啦：
 
 ![20200501123641432](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/20200501123641432.png)
