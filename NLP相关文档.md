@@ -104,5 +104,7 @@ os.chdir("/content/drive/My Drive/your_path")
 
 ## 解决Colab长时间无操作就掉线的问题
 
-使用中会发现，当我们在训练自己的模型的时候，如果长时间不操作Colab后他就会自动断线，这就很头疼了，我们也不能傻傻一直盯着它跑吧。莫慌，你可以通过以下简单的操作来解决：
+使用中会发现，当我们在训练模型的时候，如果长时间不操作Colab后他就会自动断线，这就很头疼了，我们也不能傻傻一直盯着它跑吧。莫慌，你可以通过以下简单的操作来解决：
+
+> # How to prevent Google Colab from disconnecting ?
 
