@@ -1,6 +1,6 @@
 # [Colab使用教程](https://my.oschina.net/u/4339899/blog/3434699)
 
-最近在学习NLP，但是学习[深度学习](https://cuijiahua.com/blog/tag/深度学习/)算法，需要有 **GPU**，也就是显卡。
+最近在学习NLP，但是学习``深度学习``算法，需要有 **GPU**，也就是显卡。
 
 而显卡，需要是 NVIDIA 的显卡，也就是我们俗称的 N 卡。
 
