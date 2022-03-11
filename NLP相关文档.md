@@ -27,3 +27,11 @@
 ![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZsYWdfaW5n,size_16,color_FFFFFF,t_70-20220311113155289.png)
 
 上方为入门Colab的使用，接下来是设置加速器为GPU加速
+
+### 使用GPU
+
+以下两种方式都可以：
+
+1. "修改"->"笔记本设置"->"硬件加速器"选择GPU
+2. "代码执行程序"->"更改运行时类型"->"硬件加速器"选择GPU
+
