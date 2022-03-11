@@ -35,3 +35,5 @@
 1. "修改"->"笔记本设置"->"硬件加速器"选择GPU
 2. "代码执行程序"->"更改运行时类型"->"硬件加速器"选择GPU
 
+![image-20220311113541370](../../Library/Application Support/typora-user-images/image-20220311113541370.png)
+
