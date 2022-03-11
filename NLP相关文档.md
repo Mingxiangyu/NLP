@@ -11,6 +11,16 @@
 
 ## Colab的基本配置
 
+1. **登录 [Google Drive](https://drive.google.com/)**
+
+2. **在 Google Drive 上创建文件夹，我创建的是名字为 app 的文件夹**
+
+   ![s](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/1538832-20190714224844251-1534150405.png)
+
+3. **创建新的 Colab 笔记（Notebook），通过 右键点击 > More > Colaboratory 步骤创建一个新的笔记**
+
+4. 
+
 首先你得注册个`Google账号-->Google搜索“Google 云端硬盘”-->个人 转至Google云端硬盘`，然后你就可以看到以下界面啦：
 
 ![20200501123641432](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/20200501123641432.png)
