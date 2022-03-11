@@ -43,6 +43,19 @@
 然后运行以下代码确认GPU是否正常运行
 
 ```python
-
+import tensorflow as tf
+device_name = tf.test.gpu_device_name()
+if device_name != '/device:GPU:0':
+  raise SystemError('GPU device not found')
+else: 
+  print(device_name)
 ```
+
+运行正常可以看到如下结果：
+
+![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/1410231-20190818230121013-917198933.png)
+
+否则看到如下结果：
+
+![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/6bb31b60b0606798eb1df8a2a312c063177.png)
 
