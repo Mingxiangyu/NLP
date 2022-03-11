@@ -102,6 +102,10 @@ os.chdir("/content/drive/My Drive/your_path")
 
 ![image-20220311114930181](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/image-20220311114930181.png)
 
+装载完成之后的界面如下： 
+
+![img](https://img-blog.csdnimg.cn/2020050113471425.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZsYWdfaW5n,size_16,color_FFFFFF,t_70)
+
 ## 解决Colab长时间无操作就掉线的问题
 
 使用中会发现，当我们在训练模型的时候，如果长时间不操作Colab后他就会自动断线，这就很头疼了，我们也不能傻傻一直盯着它跑吧。莫慌，你可以通过以下简单的操作来解决：
