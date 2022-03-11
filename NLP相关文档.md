@@ -9,6 +9,18 @@
 
 >  推荐大家使用 Google云端硬盘上传文件然后加载到自己的Colab里。
 
+学习[深度学习](https://cuijiahua.com/blog/tag/深度学习/)算法，**需要有 GPU**，也就是显卡。
+
+而显卡，需要是 NVIDIA 的显卡，也就是我们俗称的 N 卡。
+
+虽然人人都喊「 AMD yes，AMD 真香」，但在深度学习领域，目前来看只能对 A 卡说 No。
+
+因为，主流的推理框架，都需要在 NVIDIA 推出的 CUDA 运算平台上进行，使用上这也是最方便的。
+
+所以，如果你没有 N 卡，比如你用 Mac 本或者 A 卡电脑，那么你只能使用 **CPU 版本的深度学习框架**。
+
+深度学习使用 GPU 运算很快，用 CPU 巨慢无比。
+
 ## Colab的基本配置
 
 1. **登录 [Google Drive](https://drive.google.com/)**,注册个`Google账号-->Google搜索“Google 云端硬盘”-->个人 转至Google云端硬盘`，然后你就可以看到以下界面啦：
