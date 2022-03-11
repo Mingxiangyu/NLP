@@ -82,6 +82,13 @@ PS：如果你有其他会话正在运行，可能会看到这样的提示:
 
 不能用Linux下常用的`cd`命令，要用如下命令:
 
+加载盘
+
+```python
+from google.colab import drive
+drive.mount('/content/drive/')
+```
+
 ~~~python 
 # 指定当前的工作文件夹
 import os 
