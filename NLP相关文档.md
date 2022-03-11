@@ -4,7 +4,7 @@
 >
 > 2. Colab 是Google的且服务器在国外
 >
->    如果不能使用Google，推荐使用Kaggle（国内也能访问）👉免费的深度学习GPU环境Colab和Kaggle搭配使用
+>    如果不能使用Google，推荐使用Kaggle（国内也能访问）👉 [免费的深度学习GPU环境Colab和Kaggle搭配使用](https://www.cnblogs.com/zgqcn/p/13475630.html#kaggle)
 >    如果可以上Google，那就继续往下看学习Colab用法！如何进入Colab
 
 > 推荐大家使用 Google云端硬盘上传文件然后加载到自己的Colab里。
