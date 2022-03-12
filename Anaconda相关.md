@@ -327,3 +327,4 @@ conda upgrade <package_name>
 
 更新多个指定包，则包名以空格隔开，向后排列。如：conda update pandas numpy matplotlib即更新pandas、numpy、matplotlib包。
 
+Conda配置
