@@ -327,4 +327,19 @@ conda upgrade <package_name>
 
 更新多个指定包，则包名以空格隔开，向后排列。如：conda update pandas numpy matplotlib即更新pandas、numpy、matplotlib包。
 
-Conda配置
+## 6.Conda配置TUNA国内镜像
+
+1） 在命令行下，输入：
+
+```sh
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+```
+
+或
+
+```sh
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/conda
+```
+
+
+
