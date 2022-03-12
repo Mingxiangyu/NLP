@@ -183,7 +183,7 @@ conda remove –name <env_name> –all
 
 注意：`<env_name>`为被删除环境的名称。环境名两边不加尖括号“<>”。
 
-# **六、管理包**
+# **管理包**
 
 ## 1. 查找可供安装的包版本
 
@@ -395,7 +395,7 @@ conda upgrade <package_name>
 conda update pandas numpy matplotlib #即更新pandas、numpy、matplotlib包。
 ```
 
-## 6.Conda配置TUNA国内镜像
+## 6.配置TUNA国内镜像
 
 1） 在命令行下，输入：
 
