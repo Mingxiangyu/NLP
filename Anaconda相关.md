@@ -30,23 +30,25 @@ conda update conda
 
 当较新的版本可以用于升级时，终端会显示Proceed ([y]/n)?，此时输入y即可进行升级。
 
-**3. 查看conda帮助信息**
+## **3. 查看conda帮助信息**
 
-conda –help
-
-或
-
+```sh
 conda -h
+```
 
-\4. 卸载conda
+## **4.卸载conda**
 
 ① Linux 或 macOS
 
+```sh
 rm -rf ~/anaconda2
+```
 
 或
 
+```sh
 rm -rf ~/anaconda3
+```
 
 即删除Anaconda的安装目录。根据安装的Anaconda版本选择相应的卸载命令。
 
@@ -60,45 +62,57 @@ Python X.X：即Python的版本，如：Python 3.6。
 
 Windows 10的删除有所不同。
 
-**五、管理环境**
-
-\0. 写在前面
+# **管理环境**
 
 接下来均是以命令行模式进行介绍，Windows用户请打开“Anaconda Prompt”；macOS和Linux用户请打开“Terminal”（“终端”）进行操作。
 
-\1. 创建新环境
+## 1.创建新环境
 
+```sh
 conda create –name <env_name> <package_names>
+```
 
 注意：
 
-<env_name>即创建的环境名。建议以英文命名，且不加空格，名称两边不加尖括号“<>”。
+`<env_name>`即创建的环境名。建议以英文命名，且不加空格，名称两边不加尖括号“<>”。
 
-<package_names>即安装在环境中的包名。名称两边不加尖括号“<>”。
+`<package_names>`即安装在环境中的包名。名称两边不加尖括号“<>”。
 
-如果要安装指定的版本号，则只需要在包名后面以=和版本号的形式执行。如：conda create –name python2 python=2.7，即创建一个名为“python2”的环境，环境中安装版本为2.7的python。
+如果要安装指定的版本号，则只需要在包名后面以=和版本号的形式执行。如：
 
-如果要在新创建的环境中创建多个包，则直接在<package_names>后以空格隔开，添加多个包名即可。如：conda create -n python3 python=3.5 numpy pandas，即创建一个名为“python3”的环境，环境中安装版本为3.5的python，同时也安装了numpy和pandas。
+```sh
+conda create –name python2 python=2.7 #即创建一个名为“python2”的环境，环境中安装版本为2.7的python。
+```
+
+如果要在新创建的环境中创建多个包，则直接在`<package_names>`后以空格隔开，添加多个包名即可。如：
+
+```sh
+conda create -n python3 python=3.5 numpy pandas #即创建一个名为“python3”的环境，环境中安装版本为3.5的python，同时也安装了numpy和pandas。
+```
 
 –name同样可以替换为-n。
 
-提示：默认情况下，新创建的环境将会被保存在/Users/<user_name>/anaconda3/env目录下，其中，<user_name>为当前用户的用户名。
+提示：默认情况下，新创建的环境将会被保存在/Users/<user_name>/anaconda3/env目录下，其中，`<user_name>`为当前用户的用户名。
 
-**2. 切换环境**
+## **2. 切换环境**
 
 ① Linux 或 macOS
 
+```sh
 source activate <env_name>
+```
 
 ② Windows
 
+```sh
 activate <env_name>
+```
 
 ③ 提示
 
 如果创建环境后安装Python时没有指定Python的版本，那么将会安装与Anaconda版本相同的Python版本，即如果安装Anaconda第2版，则会自动安装Python 2.x；如果安装Anaconda第3版，则会自动安装Python 3.x。
 
-当成功切换环境之后，在该行行首将以“(env_name)”或“[env_name]”开头。其中，“env_name”为切换到的环境名。如：在macOS系统中执行source active python2，即切换至名为“python2”的环境，则行首将会以(python2)开头。
+当成功切换环境之后，在该行行首将以`“(env_name)”`或`“[env_name]”`开头。其中，“env_name”为切换到的环境名。如：在macOS系统中执行source active python2，即切换至名为“python2”的环境，则行首将会以(python2)开头。
 
 **3. 退出环境至root**
 
