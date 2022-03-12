@@ -99,7 +99,8 @@ conda create -n python3 python=3.5 numpy pandas #即创建一个名为“python3
 ① Linux 或 macOS
 
 ```sh
-source activate <env_name>
+source activate <env_name> #即将弃用，使用 conda activate <env_name>
+conda activate <env_name>
 ```
 
 ② Windows
