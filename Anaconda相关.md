@@ -361,27 +361,39 @@ conda remove pandas # 即在当前环境中卸载pandas包。
 
 ① 更新所有包
 
+```sh
 conda update –all
+```
 
 或
 
+```sh
 conda upgrade –all
+```
 
 > 建议：在安装Anaconda之后执行上述命令更新Anaconda中的所有包至最新版本，便于使用。在完全更新前必须确保网络给力不中断的前提下使用此命令，否则还是指定更新某个包。当然，为方便快捷激活、更新内置应用或包，Anaconda还支持GUI图形界面操作，安全起见，推荐使用
 
 ② 更新指定包
 
+```sh
 conda update <package_name>
+```
 
 或
 
+```sh
 conda upgrade <package_name>
+```
 
 注意：
 
-<package_name>为指定更新的包名。包名两边不加尖括号“<>”。
+`<package_name>`为指定更新的包名。包名两边不加尖括号“<>”。
 
-更新多个指定包，则包名以空格隔开，向后排列。如：conda update pandas numpy matplotlib即更新pandas、numpy、matplotlib包。
+更新多个指定包，则包名以空格隔开，向后排列。如：
+
+```sh
+conda update pandas numpy matplotlib #即更新pandas、numpy、matplotlib包。
+```
 
 ## 6.Conda配置TUNA国内镜像
 
