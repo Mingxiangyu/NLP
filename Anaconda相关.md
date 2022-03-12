@@ -177,9 +177,11 @@ conda create –name py2 –clone python2 #即为克隆名为“python2”的环
 
 ## 6.删除环境
 
+```sh
 conda remove –name <env_name> –all
+```
 
-注意：<env_name>为被删除环境的名称。环境名两边不加尖括号“<>”。
+注意：`<env_name>`为被删除环境的名称。环境名两边不加尖括号“<>”。
 
 # **六、管理包**
 
@@ -187,15 +189,21 @@ conda remove –name <env_name> –all
 
 ① 精确查找
 
+```sh
 conda search –full-name <package_full_name>
+```
 
 注意：
 
-–full-name为精确查找的参数。
+`–full-name`为精确查找的参数。
 
-<package_full_name>是被查找包的全名。包名两边不加尖括号“<>”。
+`<package_full_name>`是被查找包的全名。包名两边不加尖括号“<>”。
 
-例如：conda search –full-name python即查找全名为“python”的包有哪些版本可供安装。
+例如：
+
+```sh
+conda search –full-name python # 即查找全名为“python”的包有哪些版本可供安装。
+```
 
 ② 模糊查找
 
