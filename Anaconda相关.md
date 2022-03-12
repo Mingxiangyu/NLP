@@ -157,15 +157,23 @@ base                  *  /opt/anaconda3
 
 ## 5.复制环境
 
+```sh
 conda create –name <new_env_name> –clone <copied_env_name>
+```
 
 注意：
 
-<copied_env_name>即为被复制/克隆环境名。环境名两边不加尖括号“<>”。
+`<copied_env_name>`即为被复制/克隆环境名。环境名两边不加尖括号“<>”。
 
-<new_env_name>即为复制之后新环境的名称。环境名两边不加尖括号“<>”。
+`<new_env_name>`即为复制之后新环境的名称。环境名两边不加尖括号“<>”。
 
-如：conda create –name py2 –clone python2，即为克隆名为“python2”的环境，克隆后的新环境名为“py2”。此时，环境中将同时存在“python2”和“py2”环境，且两个环境的配置相同。
+如：
+
+```sh
+conda create –name py2 –clone python2 #即为克隆名为“python2”的环境，克隆后的新环境名为“py2”。
+```
+
+此时，环境中将同时存在“python2”和“py2”环境，且两个环境的配置相同。
 
 ## 6.删除环境
 
