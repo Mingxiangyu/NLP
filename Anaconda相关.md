@@ -1,3 +1,5 @@
+[TOC]
+
 # **管理conda**
 
 接下来均是以命令行模式进行介绍，Windows用户请打开“Anaconda Prompt”；macOS和Linux用户请打开“Terminal”（“终端”）进行操作。
@@ -182,6 +184,14 @@ conda remove –name <env_name> –all
 ```
 
 注意：`<env_name>`为被删除环境的名称。环境名两边不加尖括号“<>”。
+
+## 分享环境
+
+```sh
+conda env export > environment.yaml
+```
+
+将当前环境下的 package 信息存入名为 environment 的 YAML 文件中
 
 # **管理包**
 
