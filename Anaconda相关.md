@@ -5,16 +5,20 @@
 ## **1. 验证conda已被安装**
 
 ```shell
-conda –version
+conda -V
 ```
 
-终端上将会以conda 版本号的形式显示当前安装conda的版本号。如：conda 3.11.0
+终端上将会以conda 版本号的形式显示当前安装conda的版本号。如：
+
+~~~bash
+conda 4.10.3
+~~~
 
 注意：如果出现错误信息，则需核实是否出现以下情况：
 
 使用的用户是否是安装Anaconda时的账户。
 
-是否在安装Anaconda之后重启了终端。
+是否在`安装Anaconda之后重启了终端。`
 
 　**2. 更新conda至最新版本**
 
