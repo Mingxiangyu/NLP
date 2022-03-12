@@ -136,11 +136,9 @@ deactivate
 
 4**. 显示已创建环境**
 
-conda info –envs
-
-或
-
+```sh
 conda info -e
+```
 
 或
 
