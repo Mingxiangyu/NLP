@@ -229,6 +229,10 @@ conda list
 
 ## **3.查看指定环境下的包：**
 
+```sh
+conda list -n  <env_name>
+```
+
 
 
 ## 3. 安装包
