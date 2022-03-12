@@ -193,6 +193,14 @@ conda env export > environment.yaml
 
 将当前环境下的 package 信息存入名为 environment 的 YAML 文件中
 
+## 导入环境
+
+```sh
+conda env create -f environment.yaml
+```
+
+用分享的 YAML 文件来创建一摸一样的运行环境
+
 # **管理包**
 
 ## 1. 查找可供安装的包版本
