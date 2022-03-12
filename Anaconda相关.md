@@ -112,13 +112,19 @@ activate <env_name>
 
 如果创建环境后安装Python时没有指定Python的版本，那么将会安装与Anaconda版本相同的Python版本，即如果安装Anaconda第2版，则会自动安装Python 2.x；如果安装Anaconda第3版，则会自动安装Python 3.x。
 
-当成功切换环境之后，在该行行首将以`“(env_name)”`或`“[env_name]”`开头。其中，“env_name”为切换到的环境名。如：在macOS系统中执行source active python2，即切换至名为“python2”的环境，则行首将会以(python2)开头。
+当成功切换环境之后，在该行行首将以`“(env_name)”`或`“[env_name]”`开头。其中，`“env_name”`为切换到的环境名。如：在macOS系统中执行`source active python2`，即切换至名为`“python2”`的环境，则行首将会以`(python2)`开头。
 
 **3. 退出环境至root**
 
 ① Linux 或 macOS
 
-source deactivate
+```sh
+source deactivate #该方法
+```
+
+
+
+
 
 ② Windows
 
