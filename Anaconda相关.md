@@ -323,27 +323,39 @@ pip可以安装一些conda无法安装的包；conda也可以安装一些pip无�
 
 ① 卸载指定环境中的包
 
+```sh
 conda remove –name <env_name> <package_name>
+```
 
 注意：
 
-<env_name>即卸载包所在指定环境的名称。环境名两边不加尖括号“<>”。
+`<env_name>`即卸载包所在指定环境的名称。环境名两边不加尖括号“<>”。
 
-<package_name>即要卸载包的名称。包名两边不加尖括号“<>”。
+`<package_name>`即要卸载包的名称。包名两边不加尖括号“<>”。
 
-例如：conda remove –name python2 pandas即卸载名为“python2”中的pandas包。
+例如：
+
+```sh
+conda remove –name python2 pandas #即卸载名为“python2”中的pandas包。
+```
 
 ② 卸载当前环境中的包
 
+```sh
 conda remove <package_name>
+```
 
 注意：
 
-<package_name>即要卸载包的名称。包名两边不加尖括号“<>”。
+`<package_name>`即要卸载包的名称。包名两边不加尖括号“<>”。
 
 执行命令后即在当前环境中卸载指定包。
 
-例如：conda remove pandas即在当前环境中卸载pandas包。
+例如：
+
+```sh
+conda remove pandas # 即在当前环境中卸载pandas包。
+```
 
 ## 5. 更新包
 
