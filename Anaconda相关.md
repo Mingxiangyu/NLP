@@ -115,7 +115,7 @@ activate <env_name>
 
 当成功切换环境之后，在该行行首将以`“(env_name)”`或`“[env_name]”`开头。其中，`“env_name”`为切换到的环境名。如：在macOS系统中执行`source active python2`，即切换至名为`“python2”`的环境，则行首将会以`(python2)`开头。
 
-**3. 退出环境至root**
+## **3. 退出环境至root**
 
 ① Linux 或 macOS
 
@@ -134,7 +134,7 @@ deactivate
 
 当执行退出当前环境，回到root环境命令后，原本行首以`“(env_name)”`或`“[env_name]”`开头的字符将不再显示。
 
-4**. 显示已创建环境**
+## 4**. 显示已创建环境**
 
 ```sh
 conda info -e
@@ -142,13 +142,15 @@ conda info -e
 
 或
 
+```sh
 conda env list
+```
 
 例如：
 
 结果中星号“*”所在行即为当前所在环境。macOS系统中默认创建的环境名为“base”。
 
-\5. 复制环境
+5. 复制环境
 
 conda create –name <new_env_name> –clone <copied_env_name>
 
