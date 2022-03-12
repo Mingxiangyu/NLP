@@ -373,5 +373,9 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/f
 conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/conda
 ```
 
+ 设置搜索时显示通道地址
 
+```sh
+conda config --set show_channel_urls yes
+```
 
