@@ -148,9 +148,14 @@ conda env list
 
 例如：
 
+```bash
+#
+base                  *  /opt/anaconda3
+```
+
 结果中星号“*”所在行即为当前所在环境。macOS系统中默认创建的环境名为“base”。
 
-5. 复制环境
+## 5.复制环境
 
 conda create –name <new_env_name> –clone <copied_env_name>
 
