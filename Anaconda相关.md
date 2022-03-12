@@ -237,27 +237,39 @@ conda list -n  <env_name>
 
 ① 在指定环境中安装包
 
+```sh
 conda install –name <env_name> <package_name>
+```
 
 注意：
 
-<env_name>即将包安装的指定环境名。环境名两边不加尖括号“<>”。
+`<env_name>`即将包安装的指定环境名。环境名两边不加尖括号“<>”。
 
-<package_name>即要安装的包名。包名两边不加尖括号“<>”。
+`<package_name>`即要安装的包名。包名两边不加尖括号“<>”。
 
-例如：conda install –name python2 pandas即在名为“python2”的环境中安装pandas包。
+例如：
+
+```sh
+conda install –name python2 pandas # 即在名为“python2”的环境中安装pandas包。
+```
 
 ② 在当前环境中安装包
 
+```sh
 conda install <package_name>
+```
 
 注意：
 
-<package_name>即要安装的包名。包名两边不加尖括号“<>”。
+`<package_name>`即要安装的包名。包名两边不加尖括号“<>”。
 
 执行命令后在当前环境中安装包。
 
-例如：conda install pandas即在当前环境中安装pandas包。
+例如：
+
+```sh
+conda install pandas # 即在当前环境中安装pandas包。
+```
 
 ③ 使用pip安装包
 
@@ -267,11 +279,13 @@ conda install <package_name>
 
 → 命令
 
+```sh
 pip install <package_name>
+```
 
 注意：<package_name>为指定安装包的名称。包名两边不加尖括号“<>”。
 
-如：pip install see即安装see包。
+如：`pip install see`即安装see包。
 
 → 注意
 
