@@ -233,8 +233,6 @@ conda list
 conda list -n  <env_name>
 ```
 
-
-
 ## 3. 安装包
 
 ① 在指定环境中安装包
