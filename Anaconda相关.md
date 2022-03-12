@@ -119,20 +119,19 @@ activate <env_name>
 ① Linux 或 macOS
 
 ```sh
-source deactivate #该方法
+source deactivate #该方法conda 4.10.3版本提示即将弃用，需要使用 conda deactivate
+conda deactivate
 ```
-
-
-
-
 
 ② Windows
 
+```sh
 deactivate
+```
 
 ③ 提示
 
-当执行退出当前环境，回到root环境命令后，原本行首以“(env_name)”或“[env_name]”开头的字符将不再显示。
+当执行退出当前环境，回到root环境命令后，原本行首以`“(env_name)”`或`“[env_name]”`开头的字符将不再显示。
 
 4**. 显示已创建环境**
 
