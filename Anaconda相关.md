@@ -167,15 +167,15 @@ conda create –name <new_env_name> –clone <copied_env_name>
 
 如：conda create –name py2 –clone python2，即为克隆名为“python2”的环境，克隆后的新环境名为“py2”。此时，环境中将同时存在“python2”和“py2”环境，且两个环境的配置相同。
 
-\6. 删除环境
+## 6.删除环境
 
 conda remove –name <env_name> –all
 
 注意：<env_name>为被删除环境的名称。环境名两边不加尖括号“<>”。
 
-**六、管理包**
+# **六、管理包**
 
-\1. 查找可供安装的包版本
+## 1. 查找可供安装的包版本
 
 ① 精确查找
 
@@ -197,13 +197,13 @@ conda search <text>
 
 例如：conda search py即查找含有“py”字段的包，有哪些版本可供安装。
 
-\2. 获取当前环境中已安装的包信息
+## 2. 获取当前环境中已安装的包信息
 
 conda list
 
 执行上述命令后将在终端显示当前环境已安装包的包名及其版本号。
 
-\3. 安装包
+## 3. 安装包
 
 ① 在指定环境中安装包
 
@@ -275,7 +275,7 @@ pip可以安装一些conda无法安装的包；conda也可以安装一些pip无�
 
 完成安装。
 
-\4. 卸载包
+## 4. 卸载包
 
 ① 卸载指定环境中的包
 
@@ -301,7 +301,7 @@ conda remove <package_name>
 
 例如：conda remove pandas即在当前环境中卸载pandas包。
 
-\5. 更新包
+## 5. 更新包
 
 ① 更新所有包
 
@@ -326,3 +326,4 @@ conda upgrade <package_name>
 <package_name>为指定更新的包名。包名两边不加尖括号“<>”。
 
 更新多个指定包，则包名以空格隔开，向后排列。如：conda update pandas numpy matplotlib即更新pandas、numpy、matplotlib包。
+
