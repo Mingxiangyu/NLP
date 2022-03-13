@@ -468,3 +468,11 @@ conda config --remove channels 国内镜像源
 
 # 迁移包
 
+## 将Python环境里的包导出成txt文件
+
+```sh
+pip freeze > requirements.txt
+```
+
+## 根据requirements.txt里面的包和版本下载到本地保存
+
