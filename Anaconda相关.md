@@ -530,4 +530,8 @@ ERROR: No matching distribution found for nvidia-ml-py==375.53.1 (from -r requir
 
 
 
-3. 
+3. 另一台无网络的服务器没有网络，怎么创建的虚拟环境呢
+
+   1）下载好Anaconda，然后复制过去安装，用anaconda的base环境。
+
+   2）带一个无线网卡插上去，然后连接手机热点，用自己的流量跑
