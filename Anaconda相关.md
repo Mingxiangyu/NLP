@@ -498,7 +498,7 @@ pip install --no-index --find-links=<pack_path> -r requirements.txt
 
 ## 可能会碰到的问题
 
-1. 在执行`pip freeze > requirements.txt`时，碰到以下问题：
+### 在执行`pip freeze > requirements.txt`时，碰到以下问题：
 
 ```bash
 ERROR: Could not find a version that satisfies the requirement nvidia-ml-py==375.53.1 (from -r requirements.txt (line 61)) (from versions: 1.0, 2.285.1, 3.295.0, 4.304.2, 4.304.3, 4.304.4, 6.340.0, 7.346.0, 7.352.0, 10.418.84, 375.53)
@@ -510,28 +510,28 @@ ERROR: No matching distribution found for nvidia-ml-py==375.53.1 (from -r requir
 **解决方法：**
 到https://pypi.org/project/，去搜索一下你需要的包，然后重新安装一下、
 
-2. pytorch下载不了
+### pytorch下载不了
 
-   ```sh
-   ERROR: Could not find a version that satisfies the requirement torch==1.1.0 (from -r requirements.txt (line 12)) (from versions: 0.1.2, 0.1.2.post1, 0.1.2.post2)
-   ERROR: No matching distribution found for torch==1.1.0 (from -r requirements.txt (line 12))
-   ```
+```sh
+ERROR: Could not find a version that satisfies the requirement torch==1.1.0 (from -r requirements.txt (line 12)) (from versions: 0.1.2, 0.1.2.post1, 0.1.2.post2)
+ERROR: No matching distribution found for torch==1.1.0 (from -r requirements.txt (line 12))
+```
 
-   原因：
-   pytorch比较麻烦，通过清华源，或者pip源下载不到，需要到官网下载
-   解决方法：
-   [Pytorch官网下载最新版](https://pytorch.org/)
-   [Pytorch老版本下载页面](https://pytorch.org/get-started/previous-versions/)
-   例如，我想下载pytorch==1.1.0 windows版本，我就需要在[Pytorch老版本下载页面](https://pytorch.org/get-started/previous-versions/)这个页面里，找到pytorch 1.1.0，拉到windows这一块，这里需要根据你的CUDA版本选择，我的版本是CUDA 9.0，所以我会在https://download.pytorch.org/whl/cu90/torch_stable.html这个页面里面找到whl下载。
+原因：
+pytorch比较麻烦，通过清华源，或者pip源下载不到，需要到官网下载
+解决方法：
+[Pytorch官网下载最新版](https://pytorch.org/)
+[Pytorch老版本下载页面](https://pytorch.org/get-started/previous-versions/)
+例如，我想下载pytorch==1.1.0 windows版本，我就需要在[Pytorch老版本下载页面](https://pytorch.org/get-started/previous-versions/)这个页面里，找到pytorch 1.1.0，拉到windows这一块，这里需要根据你的CUDA版本选择，我的版本是CUDA 9.0，所以我会在https://download.pytorch.org/whl/cu90/torch_stable.html这个页面里面找到whl下载。
 
-   ![在这里插入图片描述](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpY2hhbzA2Mjc=,size_16,color_FFFFFF,t_70.png)
+![在这里插入图片描述](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpY2hhbzA2Mjc=,size_16,color_FFFFFF,t_70.png)
 
 ![在这里插入图片描述](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpY2hhbzA2Mjc=,size_16,color_FFFFFF,t_70-20220313220916377.png)
 
 
 
-3. 另一台无网络的服务器没有网络，怎么创建的虚拟环境呢
+### 另一台无网络的服务器没有网络，怎么创建的虚拟环境呢
 
-   1）下载好Anaconda，然后复制过去安装，用anaconda的base环境。
+1）下载好Anaconda，然后复制过去安装，用anaconda的base环境。
 
-   2）带一个无线网卡插上去，然后连接手机热点，用自己的流量跑
+2）带一个无线网卡插上去，然后连接手机热点，用自己的流量跑
