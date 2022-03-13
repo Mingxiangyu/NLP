@@ -1,8 +1,6 @@
 # 更换pip源
 
-
-
-## 国内的pip源
+> 国内的pip源
 
 阿里云
 
@@ -33,3 +31,5 @@ https://pypi.tuna.tsinghua.edu.cn/simple/
 ```sh
 http://pypi.mirrors.ustc.edu.cn/simple/
 ```
+
+使用方法很简单，直接 -i 加 url 即可！如下：
