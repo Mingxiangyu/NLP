@@ -8,6 +8,11 @@
 
 ```shell
 conda -V
+```
+
+或
+
+```sh
 conda --version
 ```
 
