@@ -443,3 +443,21 @@ conda config --set show_channel_urls yes
 > 如果添加源之后，conda install 仍然出现下载速度慢的情况，这个时候可以直接将`.condarc`文件 里面的-default一行删去
 
 > 如果发现更新后的版本反而更旧，是因为国内下载站没有及时更新官方最新版本，若需要官方最新版本的话就直接删除~/.condarc文件即可
+
+查看是否添加上了源
+
+```python3
+conda config --show
+```
+
+查看已使用哪些镜像源
+
+```python3
+conda config --get channels
+```
+
+逐一删除镜像源
+
+```text
+conda config --remove channels 国内镜像源
+```
