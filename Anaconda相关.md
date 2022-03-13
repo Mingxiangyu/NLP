@@ -8,6 +8,7 @@
 
 ```shell
 conda -V
+conda --version
 ```
 
 终端上将会以conda 版本号的形式显示当前安装conda的版本号。如：
