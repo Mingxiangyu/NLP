@@ -517,4 +517,11 @@ ERROR: No matching distribution found for nvidia-ml-py==375.53.1 (from -r requir
    ERROR: No matching distribution found for torch==1.1.0 (from -r requirements.txt (line 12))
    ```
 
+   原因：
+   pytorch比较麻烦，通过清华源，或者pip源下载不到，需要到官网下载
+   解决方法：
+   [Pytorch官网下载最新版](https://pytorch.org/)
+   [Pytorch老版本下载页面](https://pytorch.org/get-started/previous-versions/)
+   例如，我想下载pytorch==1.1.0 windows版本，我就需要在Pytorch老版本下载页面这个页面里，找到pytorch 1.1.0，拉到windows这一块，这里需要根据你的CUDA版本选择，我的版本是CUDA 9.0，所以我会在https://download.pytorch.org/whl/cu90/torch_stable.html这个页面里面找到whl下载。
+
 3. 
