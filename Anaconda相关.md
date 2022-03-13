@@ -421,7 +421,7 @@ conda update pandas numpy matplotlib #即更新pandas、numpy、matplotlib包。
 
 ## 6.配置TUNA国内镜像
 
-1） 在命令行下，输入：
+ 在命令行下，输入：
 
 ```sh
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
