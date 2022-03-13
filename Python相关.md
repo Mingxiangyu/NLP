@@ -32,7 +32,7 @@ https://pypi.tuna.tsinghua.edu.cn/simple/
 http://pypi.mirrors.ustc.edu.cn/simple/
 ```
 
-使用方法很简单，直接 -i 加 url 即可！如下：
+## （临时配置）使用方法很简单，直接 -i 加 url 即可！如下：
 
 ```sh
 pip install web.py -i http://pypi.douban.com/simple
@@ -48,3 +48,6 @@ pip install web.py -i http://pypi.douban.com/simple
 pip install web.py -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 ```
 
+## 配置成默认源
+
+方法如下：
