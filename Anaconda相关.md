@@ -476,3 +476,11 @@ pip freeze > requirements.txt
 
 ## 根据requirements.txt里面的包和版本下载到本地保存
 
+```sh
+pip download -r requirements.txt -d <pack_path>
+```
+
+注意：
+
+`<pack_path>`为指定的下载路径。包名两边不加尖括号“<>”。
+
