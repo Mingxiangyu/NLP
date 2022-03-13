@@ -50,4 +50,21 @@ pip install web.py -i http://pypi.douban.com/simple --trusted-host pypi.douban.c
 
 ## 配置成默认源
 
-方法如下：
+需要创建或修改配置文件（一般都是创建），
+
+linux的文件在`~/.pip/pip.conf`，
+
+windows在`%HOMEPATH%\pip\pip.ini`，
+
+修改内容为：
+
+```bash
+[global]
+index-url = http://pypi.douban.com/simple
+[install]
+trusted-host=pypi.douban.com
+```
+
+这样在使用pip来安装时，会默认调用该镜像。
+
+也可以使用读入文件进行安装。
