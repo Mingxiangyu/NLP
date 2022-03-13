@@ -524,6 +524,10 @@ ERROR: No matching distribution found for nvidia-ml-py==375.53.1 (from -r requir
    [Pytorch老版本下载页面](https://pytorch.org/get-started/previous-versions/)
    例如，我想下载pytorch==1.1.0 windows版本，我就需要在[Pytorch老版本下载页面](https://pytorch.org/get-started/previous-versions/)这个页面里，找到pytorch 1.1.0，拉到windows这一块，这里需要根据你的CUDA版本选择，我的版本是CUDA 9.0，所以我会在https://download.pytorch.org/whl/cu90/torch_stable.html这个页面里面找到whl下载。
 
-   ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200618153602229.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpY2hhbzA2Mjc=,size_16,color_FFFFFF,t_70)
+   ![在这里插入图片描述](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpY2hhbzA2Mjc=,size_16,color_FFFFFF,t_70.png)
+
+![在这里插入图片描述](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpY2hhbzA2Mjc=,size_16,color_FFFFFF,t_70-20220313220916377.png)
+
+
 
 3. 
