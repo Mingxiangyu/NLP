@@ -67,4 +67,15 @@ trusted-host=pypi.douban.com
 
 这样在使用pip来安装时，会默认调用该镜像。
 
-也可以使用读入文件进行安装。
+也可以使用读入文件进行安装：
+
+```python
+#!/usr/bin/python
+  
+import os
+  
+package = raw_input("Please input the package which you want to install!\n")
+command = "pip install %s -i http://pypi.mirrors.ustc.edu.cn/simple --trusted-host pypi.mirrors.ustc.edu.cn" % package
+os.system(command)
+```
+
