@@ -492,3 +492,10 @@ pip download -r requirements.txt -d <pack_path>
 pip install --no-index --find-links=<pack_path> -r requirements.txt
 ```
 
+注意：
+
+`<pack_path>`为本地包路径。包名两边不加尖括号“<>”。
+
+## 可能会碰到的问题
+
+1.在执行`pip freeze > requirements.txt`时，碰到以下问题：
