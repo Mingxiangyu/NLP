@@ -487,3 +487,8 @@ pip download -r requirements.txt -d <pack_path>
 ## 不通过网络，直接通过本地包进行安装
 
 这里需要说明一下，我这边是**在目的机器上也安装了Anaconda，同时创建了一个虚拟环境，切换到虚拟环境之后，再执行下面的语句**，需要自己根据实际情况稍微变通。
+
+```sh
+pip install --no-index --find-links=<pack_path> -r requirements.txt
+```
+
