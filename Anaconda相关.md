@@ -465,3 +465,6 @@ conda config --remove channels 国内镜像源
 > 例如：删除中科大源
 > conda config --remove channels [Index of /anaconda/pkgs/free/](https://link.zhihu.com/?target=https%3A//mirrors.ustc.edu.cn/anaconda/pkgs/free/)
 > conda config --remove channels [Index of /anaconda/pkgs/main/](https://link.zhihu.com/?target=https%3A//mirrors.ustc.edu.cn/anaconda/pkgs/main/)
+
+# 迁移包
+
