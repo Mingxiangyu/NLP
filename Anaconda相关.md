@@ -89,7 +89,7 @@ conda create -name <env_name> <package_names>
 如果要安装指定的版本号，则只需要在包名后面以=和版本号的形式执行。如：
 
 ```sh
-conda create –name python2 python=2.7 #即创建一个名为“python2”的环境，环境中安装版本为2.7的python。
+conda create -name python2 python=2.7 #即创建一个名为“python2”的环境，环境中安装版本为2.7的python。
 ```
 
 如果要在新创建的环境中创建多个包，则直接在`<package_names>`后以空格隔开，添加多个包名即可。如：
@@ -99,6 +99,8 @@ conda create -n python3 python=3.5 numpy pandas #即创建一个名为“python3
 ```
 
 –name同样可以替换为-n。
+
+小心`-`需要为英文，否则出现
 
 提示：默认情况下，新创建的环境将会被保存在/Users/<user_name>/anaconda3/env目录下，其中，`<user_name>`为当前用户的用户名。
 
