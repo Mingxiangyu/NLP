@@ -228,7 +228,11 @@ conda remove –-name python3 --all
 CondaEnvironmentError: cannot remove current environment. deactivate and run conda remove again
 ```
 
-请判断当前是否在某个虚拟环境下
+请判断当前是否在要删除的虚拟环境下，如果已经退出，执行删除命令仍然报上述错误，可以尝试下列命令：
+
+```sh
+ conda env remove -n python3
+```
 
 ## 分享环境
 
