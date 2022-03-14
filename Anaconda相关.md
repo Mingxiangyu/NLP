@@ -316,6 +316,30 @@ conda install pandas # 即在当前环境中安装pandas包。
 conda config --append channels conda-forge
 ```
 
+它告诉conda在搜索软件包时也要在conda-forge channel上查看。
+
+然后你就可以尝试利用如下命令再次安装
+
+```sh
+conda install 包名
+```
+
+原因在于：channel可以看成是托管python包的服务器，当无法通过标准channel获得python包时，社区驱动的conda-forge通常是一个很好的地点。大部分问题都可以利用这条语句解决。
+
+##### 方法二：利用报错提示，进入annaconda网站利用命令解决
+
+当添加上述语句仍然出现错误，安装某个python包时（并不特别对于某个特定包，各种包有时都会出现这种情况 。会出现当前channel不可用，并报错：
+
+```sh
+PackagesNotFoundError: The following packages are not available from current channels:
+```
+
+报错的完整显示：
+
+```
+
+```
+
 
 
 ### 使用pip安装包
