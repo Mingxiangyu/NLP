@@ -119,7 +119,11 @@ conda create -n python3 python=3.5 numpy pandas #即创建一个名为“python3
 conda create --prefix=D:\python36\py36 python=3.6
 ```
 
+上面的命令中， 路径D:\python36是先建好的文件夹，py36是需要安装的虚拟环境名称。请注意，安装完成后，虚拟环境的全称包含整个路径，为D:\python36\py36。激活指定路径下的虚拟环境的命令如下：
 
+```sh
+conda activate D:\python36\py36
+```
 
 ## **2. 切换环境**
 
