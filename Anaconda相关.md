@@ -308,6 +308,16 @@ conda install pandas # 即在当前环境中安装pandas包。
 
 #### PackagesNotFoundError: The following packages are not available from current channels的解决办法
 
+##### 解决方法一：将[conda](https://so.csdn.net/so/search?q=conda&spm=1001.2101.3001.7020)-forge添加到搜索路径上
+
+首先，当出现这种报错时，应该首先尝试使用以下命令将conda-forge channel添加到你的channel列表中
+
+```sh
+conda config --append channels conda-forge
+```
+
+
+
 ### 使用pip安装包
 
 → 使用场景
