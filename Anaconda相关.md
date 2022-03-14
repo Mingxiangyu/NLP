@@ -113,6 +113,14 @@ conda create -n python3 python=3.5 numpy pandas #即创建一个名为“python3
 
 提示：默认情况下，新创建的环境将会被保存在/Users/<user_name>/anaconda3/env目录下，其中，`<user_name>`为当前用户的用户名。
 
+**安装虚拟环境到指定路径的命令如下：**
+
+```sh
+conda create --prefix=D:\python36\py36 python=3.6
+```
+
+
+
 ## **2. 切换环境**
 
 ① Linux 或 macOS
