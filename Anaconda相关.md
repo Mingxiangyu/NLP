@@ -1,6 +1,6 @@
 [TOC]
 
-> **以下均以conda 4.10.3版本为例，anaconda安装包版本为Anaconda3-2021.11-MacOSX-x86_64 (1).pkg**
+> ### **以下均以conda 4.10.3版本为例，anaconda安装包版本为Anaconda3-2021.11-MacOSX-x86_64 (1).pkg**
 
 # **管理conda**
 
