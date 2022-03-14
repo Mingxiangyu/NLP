@@ -209,7 +209,7 @@ conda create –name py2 –clone python2 #即为克隆名为“python2”的环
 ## 6.删除环境
 
 ```sh
-conda remove –name <env_name> –all
+conda remove –-name <env_name> -–all
 ```
 
 注意：`<env_name>`为被删除环境的名称。环境名两边不加尖括号“<>”。
@@ -217,6 +217,7 @@ conda remove –name <env_name> –all
 如：
 
 ```sh
+conda remove –-name python3 --all
 ```
 
 
