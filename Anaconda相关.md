@@ -466,7 +466,7 @@ pip install <package_name>
 
 如：`pip install see`即安装see包。
 
-→ 注意
+注意：
 
 pip只是包管理器，无法对环境进行管理。因此如果想在指定环境中使用pip进行安装包，则需要先切换到指定环境中，再使用pip命令安装包。
 
