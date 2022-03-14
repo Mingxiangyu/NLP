@@ -270,7 +270,7 @@ conda list -n  <env_name>
 
 ## 3. 安装包
 
-① 在指定环境中安装包
+### 在指定环境中安装包
 
 ```sh
 conda install –name <env_name> <package_name>
@@ -288,7 +288,7 @@ conda install –name <env_name> <package_name>
 conda install –name python2 pandas # 即在名为“python2”的环境中安装pandas包。
 ```
 
-② 在当前环境中安装包
+### 在当前环境中安装包
 
 ```sh
 conda install <package_name>
@@ -306,7 +306,7 @@ conda install <package_name>
 conda install pandas # 即在当前环境中安装pandas包。
 ```
 
-③ 使用pip安装包
+### 使用pip安装包
 
 → 使用场景
 
@@ -330,7 +330,7 @@ pip无法更新python，因为pip并不将python视为包。
 
 pip可以安装一些conda无法安装的包；conda也可以安装一些pip无法安装的包。因此当使用一种命令无法安装包时，可以尝试用另一种命令。
 
-④ 从[http://Anaconda.org](https://links.jianshu.com/go?to=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttp%3A%2F%2FAnaconda.org)安装包
+###  从[http://Anaconda.org](https://links.jianshu.com/go?to=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttp%3A%2F%2FAnaconda.org)安装包
 
 → 使用场景
 
