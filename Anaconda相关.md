@@ -86,6 +86,17 @@ conda create -name <env_name> <package_names>
 
 `<package_names>`即安装在环境中的包名。名称两边不加尖括号“<>”。
 
+小心`-`需要为英文，否则出现该报错
+
+```sh
+CondaValueError: The target prefix is the base prefix. Aborting.
+```
+
+```sh
+conda create –n pytorch python=3.6  #错误！中文-
+conda create -n pytorch python=3.6  #正确！英文-
+```
+
 如果要安装指定的版本号，则只需要在包名后面以=和版本号的形式执行。如：
 
 ```sh
@@ -99,17 +110,6 @@ conda create -n python3 python=3.5 numpy pandas #即创建一个名为“python3
 ```
 
 –name同样可以替换为-n。
-
-小心`-`需要为英文，否则出现该报错
-
-```sh
-CondaValueError: The target prefix is the base prefix. Aborting.
-```
-
-```sh
-conda create –n pytorch python=3.6  #错误！中文-
-conda create -n pytorch python=3.6  #正确！英文-
-```
 
 提示：默认情况下，新创建的环境将会被保存在/Users/<user_name>/anaconda3/env目录下，其中，`<user_name>`为当前用户的用户名。
 
