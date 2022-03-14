@@ -604,12 +604,20 @@ pip freeze > requirements.txt
 ## 根据requirements.txt里面的包和版本下载到本地保存
 
 ```sh
-pip download -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt -d <pack_path>
+pip download -r requirements.txt -d <pack_path>
 ```
 
 注意：
 
 `<pack_path>`为指定的下载路径。包名两边不加尖括号“<>”。
+
+提示：
+
+如果使用默认pip源过慢，可指定国内源，如：
+
+```sh
+pip download -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt -d packs
+```
 
 ## 不通过网络，直接通过本地包进行安装
 
