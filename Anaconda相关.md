@@ -222,6 +222,12 @@ conda remove –-name <env_name> -–all
 conda remove –-name python3 --all
 ```
 
+如果提示：
+
+```sh
+cannot remove current environment. deactivate and run conda remove again
+```
+
 
 
 ## 分享环境
