@@ -57,7 +57,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 ```
 
-原来安装Python添加的环境变量需要注释或者放到conda添加的下面，否则后续在虚拟环境中pip命令使用的也是
+**原来安装Python添加的环境变量需要注释或者放到conda添加的下面，`否则后续在虚拟环境中pip命令使用的还是本机的pip命令`**
 
 ## **2. 更新conda至最新版本**
 
