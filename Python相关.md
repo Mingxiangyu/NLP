@@ -84,7 +84,6 @@ os.system(command)
 查看Python安装位置
 
 ```python3
-where python
 which python
 ```
 
@@ -153,5 +152,11 @@ pip install xxx #安装xxx包
 pip uninstall xxx #删除xxx包
 pip show xxx #展示指定的已安装的xxx包
 pip check xxx #检查xxx包的依赖是否合适
+```
+
+查看Python安装位置
+
+```python3
+which pip
 ```
 
