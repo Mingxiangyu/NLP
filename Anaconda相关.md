@@ -337,8 +337,50 @@ PackagesNotFoundError: The following packages are not available from current cha
 报错的完整显示：
 
 ```
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... failed with initial frozen solve. Retrying with flexible solve.
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed with initial frozen solve. Retrying with flexible solve.
 
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - igraph
+
+Current channels:
+
+  - https://repo.anaconda.com/pkgs/main/win-64
+  - https://repo.anaconda.com/pkgs/main/noarch
+  - https://repo.anaconda.com/pkgs/r/win-64
+  - https://repo.anaconda.com/pkgs/r/noarch
+  - https://repo.anaconda.com/pkgs/msys2/win-64
+  - https://repo.anaconda.com/pkgs/msys2/noarch
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
 ```
+
+解决办法其实人家在报错中已经说了：
+
+```bash
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+```
+
+你需要去 https://anaconda.org 这个网址，在上方的搜索条上搜索你要安装这个包的其他channel，下边展示一下如何找igraph的其他channel
+首先进入上述网址，你可以在上方看到搜索条：
+
+![大多数公共软件包都可以不登陆直接搜索](https://img-blog.csdnimg.cn/20201113095745194.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTU1MjU2Mg==,size_16,color_FFFFFF,t_70#pic_center)
+
+
 
 
 
