@@ -95,7 +95,34 @@ python -V
 
 # PIP相关
 
-修复pip
+## pip数据源管理
+
+```sh
+#显示目前pip的数据源有哪些
+pip config list
+pip config list --[user|global] # 列出用户|全局的设置
+pip config get global.index-url # 得到这key对应的value 如：https://mirrors.aliyun.com/pypi/simple/
+
+# 添加
+pip config set key value
+#添加数据源：例如, 添加USTC中科大的源：
+pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
+#添加全局使用该数据源
+pip config set global.trusted-host https://mirrors.ustc.edu.cn/pypi/web/simple
+
+# 删除
+pip config unset key
+# 例如
+conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+
+#搜索
+pip search flask  #搜素flask安装包
+
+# 升级pip
+pip install pip -U
+```
+
+## 修复pip
 
 ```python3
 python -m ensurepip # 修复pip
