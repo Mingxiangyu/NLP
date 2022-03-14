@@ -101,3 +101,16 @@ python -V
 python -m ensurepip # 修复pip
 python -m pip install --upgrade pip  # 更新pip
 ```
+
+**问题：**采用pip install pillow安装pillow，并提示成功安装，但是`from PIL import Image`提示如下错误
+
+> **ModuleNotFoundError: No module named 'PIL'**
+
+**解决：**先卸载，后重装。
+
+```python3
+pip uninstall pillow 
+pip install pillow 
+easy_install Pillow 
+```
+
