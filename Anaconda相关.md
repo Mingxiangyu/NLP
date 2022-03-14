@@ -566,6 +566,14 @@ conda upgrade <package_name>
 conda update pandas numpy matplotlib #即更新pandas、numpy、matplotlib包。
 ```
 
+## 清理（[conda](https://so.csdn.net/so/search?q=conda&spm=1001.2101.3001.7020)瘦身）
+
+`conda clean`就可以轻松搞定！
+
+第一步：通过`conda clean -p`来删除一些没用的包，这个命令会检查哪些包没有在包缓存中被硬依赖到其他地方，并删除它们。
+
+第二步：通过`conda clean -t`可以将conda保存下来的tar包。
+
 ## 6.配置TUNA国内镜像
 
  在命令行下，输入：
