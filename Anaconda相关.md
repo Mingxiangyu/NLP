@@ -306,6 +306,8 @@ conda install <package_name>
 conda install pandas # 即在当前环境中安装pandas包。
 ```
 
+#### PackagesNotFoundError: The following packages are not available from current channels的解决办法
+
 ### 使用pip安装包
 
 → 使用场景
