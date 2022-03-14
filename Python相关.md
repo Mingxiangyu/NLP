@@ -141,3 +141,16 @@ pip install pillow
 easy_install Pillow 
 ```
 
+## pip安装包管理
+
+```sh
+pip list #列出当前缓存的包
+pip purge #清除缓存
+pip remove #删除对应的缓存
+pip help #帮助
+pip install xxx #安装xxx包
+pip uninstall xxx #删除xxx包
+pip show xxx #展示指定的已安装的xxx包
+pip check xxx #检查xxx包的依赖是否合适
+```
+
