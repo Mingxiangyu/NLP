@@ -507,7 +507,7 @@ conda remove –name <env_name> <package_name>
 例如：
 
 ```sh
-conda remove –name python2 pandas #即卸载名为“python2”中的pandas包。
+conda remove –name python2 pandas #即卸载名为“python2”虚拟环境中的pandas包。
 ```
 
 ② 卸载当前环境中的包

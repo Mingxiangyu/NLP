@@ -79,3 +79,9 @@ command = "pip install %s -i http://pypi.mirrors.ustc.edu.cn/simple --trusted-ho
 os.system(command)
 ```
 
+# 查看Python安装位置
+
+```python3
+where python
+```
+
