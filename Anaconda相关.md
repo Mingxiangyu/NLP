@@ -462,15 +462,17 @@ D/anaconda3/pkgs/~
 pip install <package_name>
 ```
 
-注意：<package_name>为指定安装包的名称。包名两边不加尖括号“<>”。
+注意1：<package_name>为指定安装包的名称。包名两边不加尖括号“<>”。
 
 如：`pip install see`即安装see包。
 
-注意：
+注意2：
 
 使用`pip`安装前请确认是否在虚拟环境中，否则安装的包将装在全局中
 
 可以使用`which pip`命令查看pip是否是全局的pip命令，如果进入环境中，pip仍然为全局pip，可使用`python -m pip install <package>`命令进行虚拟环境内安装包
+
+注意3：
 
 pip只是包管理器，无法对环境进行管理。因此如果想在指定环境中使用pip进行安装包，则需要先切换到指定环境中，再使用pip命令安装包。
 
