@@ -472,7 +472,7 @@ pip只是包管理器，无法对环境进行管理。因此如果想在指定�
 
 pip无法更新python，因为pip并不将python视为包。
 
-pip可以安装一些conda无法安装的包；conda也可以安装一些pip无法安装的包。因此当使用一种命令无法安装包时，可以尝试用另一种命令。`卸载包时用安装包的命令下载，不要混用`，如用pip安装则用pip卸载
+pip可以安装一些conda无法安装的包；conda也可以安装一些pip无法安装的包。因此当使用一种命令无法安装包时，可以尝试用另一种命令。`卸载包时用安装包的命令下载，不要混用`，如用`pip`安装则用`pip`卸载
 
 ###  从[http://Anaconda.org](https://links.jianshu.com/go?to=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttp%3A%2F%2FAnaconda.org)安装包
 
