@@ -225,10 +225,10 @@ conda remove –-name python3 --all
 如果提示：
 
 ```bash
-cannot remove current environment. deactivate and run conda remove again
+CondaEnvironmentError: cannot remove current environment. deactivate and run conda remove again
 ```
 
-
+请判断当前是否在某个虚拟环境下
 
 ## 分享环境
 
