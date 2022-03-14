@@ -388,6 +388,14 @@ and use the search bar at the top of the page.
 
 ![运行任意一条命令](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTU1MjU2Mg==,size_16,color_FFFFFF,t_70-20220314122534639.png)
 
+##### 方法三：进入annaconda网站利用包的安装包安装
+
+如果上述这些命令经过一一尝试都无效，那只有下载该python包对应的本地“***.bz2”本地文件，然后利用annaconda进行本地安装，需要点击上图的file，下载本机环境下对应的安装包：
+
+![点击你所需要的安装包名，网页会自动下载](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTU1MjU2Mg==,size_16,color_FFFFFF,t_70-20220314122648557.png)
+
+
+
 
 
 ### 使用pip安装包
