@@ -1,5 +1,7 @@
 [TOC]
 
+> **以下均以conda 4.10.3版本为例，anaconda安装包版本为Anaconda3-2021.11-MacOSX-x86_64 (1).pkg**
+
 # **管理conda**
 
 接下来均是以命令行模式进行介绍，Windows用户请打开“Anaconda Prompt”；macOS和Linux用户请打开“Terminal”（“终端”）进行操作。
