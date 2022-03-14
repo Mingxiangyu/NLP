@@ -148,6 +148,11 @@ activate <env_name>
 
 当成功切换环境之后，在该行行首将以`“(env_name)”`或`“[env_name]”`开头。其中，`“env_name”`为切换到的环境名。如：在macOS系统中执行`source active python2`，即切换至名为`“python2”`的环境，则行首将会以`(python2)`开头。
 
+```sh
+conda config --set auto_activate_base false  #关闭自动激活状态
+conda config --set auto_activate_base true  #关闭自动激活状态
+```
+
 ## **3. 退出环境至root**
 
 ① Linux 或 macOS
@@ -189,6 +194,9 @@ base                  *  /opt/anaconda3
 结果中星号“*”所在行即为当前所在环境。macOS系统中默认创建的环境名为“base”。
 
 ## 5.复制环境
+
+> Conda是没有重命名环境的功能的, 要实现这个基本需求, 只能通过愚蠢的**克隆-删除**的过程。
+> 切记不要直接mv移动环境的文件夹来重命名, 会导致一系列无法想象的错误的发生!
 
 ```sh
 conda create –name <new_env_name> –clone <copied_env_name>
