@@ -77,7 +77,7 @@ Windows 10的删除有所不同。
 ## 1.创建新环境
 
 ```sh
-conda create –name <env_name> <package_names>
+conda create -name <env_name> <package_names>
 ```
 
 注意：
