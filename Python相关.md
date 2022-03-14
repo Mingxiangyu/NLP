@@ -85,6 +85,7 @@ os.system(command)
 
 ```python3
 where python
+which python
 ```
 
 查看Python的版本
