@@ -224,7 +224,7 @@ conda remove –-name python3 --all
 
 如果提示：
 
-```sh
+```bash
 cannot remove current environment. deactivate and run conda remove again
 ```
 
