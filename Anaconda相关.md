@@ -396,7 +396,19 @@ and use the search bar at the top of the page.
 
 
 
+把下载好的“python-igraph-0.8.3-py38h0d6bca7_2.tar.bz2”这个安装包放到anaconda存放包的目录下，如:
 
+```sh
+D/anaconda3/pkgs/~
+```
+
+然后执行命令：
+
+```sh
+  conda install --use-local  python-igraph-0.8.3-py38h0d6bca7_2.tar.bz2
+```
+
+即可完成安装。（bz2前的包名根据你所需要的包而不同，“python-igraph-0.8.3-py38h0d6bca7_2.tar.bz2”是我所安装的igraph）
 
 ### 使用pip安装包
 
