@@ -34,7 +34,30 @@ conda 4.10.3
 
 安装完成后去查看下环境变量，确认conda是否将变量添加进环境变量中，通过`sudo vi ~/.bash_profile`命令查看，成功添加效果如下
 
+```bash
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+#PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+#export PATH
 
+#alias pip="/Library/Frameworks/Python.framework/Versions/3.6/bin/pip3"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+```
+
+原来安装Python添加的环境变量需要注释或者放到conda添加的下面，否则后续在虚拟环境中pip命令使用的也是
 
 ## **2. 更新conda至最新版本**
 
