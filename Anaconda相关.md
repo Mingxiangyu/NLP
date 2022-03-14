@@ -380,7 +380,13 @@ and use the search bar at the top of the page.
 
 ![大多数公共软件包都可以不登陆直接搜索](https://img-blog.csdnimg.cn/20201113095745194.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTU1MjU2Mg==,size_16,color_FFFFFF,t_70#pic_center)
 
+我这里搜索igraph，会出现所有包名中包含“igraph”字段的包：
 
+![点击想要的加粗绿色包名就可以查找详细信息](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTU1MjU2Mg==,size_16,color_FFFFFF,t_70-20220314122513860.png)
+
+接着在你的命令行窗口或Anaconda Prompt窗口对应的路径下运行页面中提供的任意一条命令即可。
+
+![运行任意一条命令](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTU1MjU2Mg==,size_16,color_FFFFFF,t_70-20220314122534639.png)
 
 
 
