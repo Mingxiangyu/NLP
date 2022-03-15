@@ -1,15 +1,7 @@
-from wordcloud import WordCloud
-f = open('data/alice.txt').read()
-wordcloud = WordCloud(background_color="white",width=1000, height=860, margin=2).generate(f) 
-
-import matplotlib.pyplot as plt
-ax = plt.imshow(wordcloud)
-fig = ax.figure
-fig.set_size_inches(25,20)  
-plt.axis("off")
-plt.show()
-
-# 作者：ZhangYi
-# 链接：https://www.zhihu.com/question/19895141/answer/515535069
-# 来源：知乎
-# 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+from hanlp_restful import HanLPClient
+# Fill in your auth, set language='zh' to use Chinese models
+HanLP = HanLPClient('https://hanlp.hankcs.com/api', auth=None, language='mul')
+doc = HanLP('In 2021, HanLPv2.1 delivers state-of-the-art multilingual NLP techniques to production environments. ' \
+            '2021年、HanLPv2.1は次世代の最先端多言語NLP技術を本番環境に導入します。' \
+            '2021年 HanLPv2.1为生产环境带来次世代最先进的多语种NLP技术。')
+print(doc)
