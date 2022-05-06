@@ -65,6 +65,12 @@ index-url = http://pypi.douban.com/simple
 trusted-host=pypi.douban.com
 ```
 
+或者
+
+ ```
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+ ```
+
 这样在使用pip来安装时，会默认调用该镜像。
 
 也可以使用读入文件进行安装：

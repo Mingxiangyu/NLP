@@ -65,6 +65,14 @@ unset __conda_setup
 conda update conda
 ```
 
+###   更新Anaconda到最新版
+
+​          [注意：在更新Anaconda前需要先更新conda]
+
+            ~~~
+conda update anaconda 
+            ~~~
+
 执行命令后，conda将会对版本进行比较并列出可以升级的版本。同时，也会告知用户其他相关包也会升级到相应版本。
 
 当较新的版本可以用于升级时，终端会显示Proceed ([y]/n)?，此时输入y即可进行升级。
@@ -377,9 +385,15 @@ conda install <package_name>
 conda install pandas # 即在当前环境中安装pandas包。
 ```
 
-#### PackagesNotFoundError: The following packages are not available from current channels的解决办法
+### 清除Conda索引缓存
 
-##### 解决方法一：将[conda](https://so.csdn.net/so/search?q=conda&spm=1001.2101.3001.7020)-forge添加到搜索路径上
+~~~
+conda clean -i 
+~~~
+
+### PackagesNotFoundError: The following packages are not available from current channels的解决办法
+
+#### 解决方法一：将[conda](https://so.csdn.net/so/search?q=conda&spm=1001.2101.3001.7020)-forge添加到搜索路径上
 
 首先，当出现这种报错时，应该首先尝试使用以下命令将conda-forge channel添加到你的channel列表中
 
@@ -397,7 +411,7 @@ conda install 包名
 
 原因在于：channel可以看成是托管python包的服务器，当无法通过标准channel获得python包时，社区驱动的conda-forge通常是一个很好的地点。大部分问题都可以利用这条语句解决。
 
-##### 方法二：利用报错提示，进入annaconda网站利用命令解决
+#### 方法二：利用报错提示，进入annaconda网站利用命令解决
 
 当添加上述语句仍然出现错误，安装某个python包时（并不特别对于某个特定包，各种包有时都会出现这种情况 。会出现当前channel不可用，并报错：
 
@@ -459,7 +473,7 @@ and use the search bar at the top of the page.
 
 ![运行任意一条命令](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTU1MjU2Mg==,size_16,color_FFFFFF,t_70-20220314122534639.png)
 
-##### 方法三：进入annaconda网站利用包的安装包安装
+#### 方法三：进入annaconda网站利用包的安装包安装
 
 如果上述这些命令经过一一尝试都无效，那只有下载该python包对应的本地“***.bz2”本地文件，然后利用annaconda进行本地安装，需要点击上图的file，下载本机环境下对应的安装包：
 
@@ -627,17 +641,32 @@ conda clean -y --all //删除所有的安装包及cache
 
 ## 6.配置TUNA国内镜像
 
- 在命令行下，输入：
+ 在命令行下，输入： (后添加的通道优先级更高)
 
 ```sh
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ 
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/conda
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud//pytorch/
 ```
 
-或
+或直接把下面文字拷贝到 `~/.condarc`中 (越靠前的优先级越高)
 
 ```sh
-conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/conda
+channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud//pytorch/
 ```
 
  设置搜索时显示通道地址
