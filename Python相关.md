@@ -1,35 +1,56 @@
-# 更换pip源
+# Python相关
+
+查看Python安装位置
+
+```python3
+which python
+```
+
+查看Python的版本
+
+```python3
+python -V
+```
+
+# PIP相关
+
+## pip数据源管理
+
+```sh
+#显示目前pip的数据源有哪些
+pip config list
+pip config list --[user|global] # 列出用户|全局的设置
+pip config get global.index-url # 得到这key对应的value 如：https://mirrors.aliyun.com/pypi/simple/
+
+# 添加
+pip config set key value
+#添加数据源：例如, 添加USTC中科大的源：
+pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
+#添加全局使用该数据源
+pip config set global.trusted-host https://mirrors.ustc.edu.cn/pypi/web/simple
+
+# 删除
+pip config unset key
+# 例如
+conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+
+#搜索
+pip search flask  #搜素flask安装包
+
+# 升级pip
+pip install pip -U
+```
+
+## 更换pip源
 
 > 国内的pip源
 
-阿里云
-
-```text
- http://mirrors.aliyun.com/pypi/simple/
-```
-
-中国科技大学
-
-```sh
-https://pypi.mirrors.ustc.edu.cn/simple/
-```
-
-豆瓣(douban) 
-
-```sh
-http://pypi.douban.com/simple/ 
-```
-
-清华大学 
-
-```sh
-https://pypi.tuna.tsinghua.edu.cn/simple/
-```
-
-中国科学技术大学 
-
-```sh
-http://pypi.mirrors.ustc.edu.cn/simple/
+```bash
+http://mirrors.aliyun.com/pypi/simple/ #阿里云
+https://pypi.mirrors.ustc.edu.cn/simple/ #中国科技大学
+http://pypi.douban.com/simple/  #豆瓣(douban) 
+https://pypi.tuna.tsinghua.edu.cn/simple/ #清华大学 
+http://pypi.mirrors.ustc.edu.cn/simple/ #中国科学技术大学 
 ```
 
 ## （临时配置）使用方法很简单，直接 -i 加 url 即可！如下：
@@ -85,49 +106,6 @@ command = "pip install %s -i http://pypi.mirrors.ustc.edu.cn/simple --trusted-ho
 os.system(command)
 ```
 
-# Python相关
-
-查看Python安装位置
-
-```python3
-which python
-```
-
-查看Python的版本
-
-```python3
-python -V
-```
-
-# PIP相关
-
-## pip数据源管理
-
-```sh
-#显示目前pip的数据源有哪些
-pip config list
-pip config list --[user|global] # 列出用户|全局的设置
-pip config get global.index-url # 得到这key对应的value 如：https://mirrors.aliyun.com/pypi/simple/
-
-# 添加
-pip config set key value
-#添加数据源：例如, 添加USTC中科大的源：
-pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple
-#添加全局使用该数据源
-pip config set global.trusted-host https://mirrors.ustc.edu.cn/pypi/web/simple
-
-# 删除
-pip config unset key
-# 例如
-conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-
-#搜索
-pip search flask  #搜素flask安装包
-
-# 升级pip
-pip install pip -U
-```
-
 ## 修复pip
 
 ```python3
@@ -143,8 +121,7 @@ python -m pip install --upgrade pip  # 更新pip
 
 ```python3
 pip uninstall pillow 
-pip install pillow 
-easy_install Pillow 
+pip install pillow  
 ```
 
 ## pip安装包管理
@@ -155,6 +132,7 @@ pip purge #清除缓存
 pip remove #删除对应的缓存
 pip help #帮助
 pip install xxx #安装xxx包
+pip install ... --no-cache-dir #跳过缓存
 pip uninstall xxx #删除xxx包
 pip show xxx #展示指定的已安装的xxx包
 pip check xxx #检查xxx包的依赖是否合适
@@ -164,5 +142,26 @@ pip check xxx #检查xxx包的依赖是否合适
 
 ```python3
 which pip
+```
+
+如果pip安装时出现问题并且看不到报错，可以尝试以下命令（debug形式运行install）
+
+```python
+pip install -vvv <package_name>   #package_name为你想安装的包名称，不带<>
+```
+
+## 清除缓存
+
+### linux缓存所在文件夹
+
+```bash
+cd ~/.cache/pip
+sudo rm -rf * #清除所有缓存
+```
+
+### win缓存所在文件夹
+
+```bash
+C:\Users\<user_name>\AppData\Local\pip\cache
 ```
 

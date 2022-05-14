@@ -633,7 +633,7 @@ conda update pandas numpy matplotlib #即更新pandas、numpy、matplotlib包。
 
 第二步：通过`conda clean -t`可以删除conda保存下来的tar包。
 
-```
+```bash
 conda clean -p      //删除没有用的包
 conda clean -t      //删除tar包
 conda clean -y --all //删除所有的安装包及cache

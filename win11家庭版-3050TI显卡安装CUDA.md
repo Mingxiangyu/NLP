@@ -1,3 +1,5 @@
+[TOC]
+
 # win11家庭版-3050TI显卡安装CUDA11.3
 
 ### CUDA ToolKit 安装
@@ -178,6 +180,22 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\libnvvp
 > 发现硬件加速 GPU 计划被开启，把它关掉，然后重启即可。
 
 ![image-20220505183844730](C:\Users\zhouhuilin\AppData\Roaming\Typora\typora-user-images\image-20220505183844730.png)
+
+- **设置运行3D程序时全程使用独立显卡**
+
+1、右键单击桌面空白处，选择 “**NVIDIA控制面板**”；如图所示：
+
+![img](http://robotrs.lenovo.com.cn/ZmptY2NtYW5hZ2Vy/p4data/Rdata/Rfiles/68.files/image001.jpg)
+
+2、在“**3D设置**”菜单下的“**管理3D设置**”中选择“**全局设置**”，然后在“**首选图形处理器**”下拉菜单中选择“**高性能NVIDIA处理器**”，单击“**应用**”；如图所示：
+
+![img](http://robotrs.lenovo.com.cn/ZmptY2NtYW5hZ2Vy/p4data/Rdata/Rfiles/68.files/image002.jpg)
+
+- 如果总是出现**Could not find a version that satisfies the requirement torch (from versions: none)  No matching distribution found for torch**，可以考虑是不是版本不对应
+
+我出现的问题是anaconda装成32位（X86）的了，cuda等是64位，导致pytorch和TensorFlow等都没法安装，换成anaconda64位就可以正常安装了
+
+![image-20220506170215148](C:\Users\zhouhuilin\AppData\Roaming\Typora\typora-user-images\image-20220506170215148.png)
 
 ## 参考博客
 
