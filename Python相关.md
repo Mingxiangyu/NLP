@@ -1,3 +1,5 @@
+[TOC]
+
 # Python相关
 
 查看Python安装位置
@@ -164,4 +166,34 @@ sudo rm -rf * #清除所有缓存
 ```bash
 C:\Users\<user_name>\AppData\Local\pip\cache
 ```
+
+## 用pip生成当前环境下的requirements文件
+
+```sh
+pip freeze > requirements.txt
+```
+
+## 用pip安装当前环境下的requirements文件
+
+```sh
+pip install -r requirements.txt
+```
+
+# 常见问题
+
+## 如果用pip提示找不到相关库，可以切换下用conda指令安装；
+
+## 如果用某个源下载速度慢，即可多切换下不同的镜像源试试，比如有时候用清华源只有10k，换个豆瓣源有2M多；
+
+## 如果提示连接超时，代理设置有问题的，可以检查下自己的vpn是否开启了全局，可改成PAC模式；
+
+## 如果出现“conda Collecting package metadata (current_repodata.json): failed”，说明当前设置的镜像源可能失效，可直接通过下面指令依次执行后，再重新安装你需要的包：
+
+~~~sh
+conda config --remove-key channels
+conda update conda
+conda update --all
+conda config --add channels conda-forge
+conda config --set channel_priority flexible
+~~~
 

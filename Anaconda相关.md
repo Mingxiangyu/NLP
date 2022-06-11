@@ -385,10 +385,10 @@ conda install <package_name>
 conda install pandas # 即在当前环境中安装pandas包。
 ```
 
-### 清除Conda索引缓存
+### 清除Conda索引缓存*清理没有使用过的包*
 
 ~~~
-conda clean -i 
+conda clean -p
 ~~~
 
 ### PackagesNotFoundError: The following packages are not available from current channels的解决办法
