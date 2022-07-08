@@ -297,6 +297,16 @@ conda env create -f environment.yaml
 
 用分享的 YAML 文件来创建一摸一样的运行环境
 
+## 自动开启/关闭环境
+
+```sh
+conda activate   #默认激活base环境
+conda activate xxx  #激活xxx环境
+conda deactivate #关闭当前环境
+conda config --set auto_activate_base false  #关闭自动激活状态
+conda config --set auto_activate_base true  #关闭自动激活状态
+```
+
 # **管理包**
 
 ## 1. 查找可供安装的包版本
@@ -667,6 +677,8 @@ channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud//pytorch/
+show_channel_urls: true
+auto_activate_base: false  #关闭自动激活状态
 ```
 
  设置搜索时显示通道地址
@@ -739,7 +751,7 @@ pip install --no-index --find-links=<pack_path> -r requirements.txt
 
 `<pack_path>`为本地包路径。包名两边不加尖括号“<>”。
 
-## 可能会碰到的问题
+# 可能会碰到的问题
 
 ### 在执行`pip freeze > requirements.txt`时，碰到以下问题：
 
@@ -778,3 +790,29 @@ pytorch比较麻烦，通过清华源，或者pip源下载不到，需要到官�
 1）下载好Anaconda，然后复制过去安装，用anaconda的base环境。
 
 2）带一个无线网卡插上去，然后连接手机热点，用自己的流量跑
+
+
+
+### anaconda或conda不是内部命令
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190624104613684.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3poYXl1c2h1aQ==,size_16,color_FFFFFF,t_70)
+
+添加上图环境变量即可
+
+### 更改 Python 的 pip install 默认安装依赖路径
+
+[更改 Python 的 pip install 默认安装依赖路径](https://blog.csdn.net/mukvintt/article/details/80908951) https://blog.csdn.net/mukvintt/article/details/80908951
+
+### 改变conda虚拟环境的默认路径
+
+[改变conda虚拟环境的默认路径](https://blog.csdn.net/qq_36455412/article/details/125347552) https://blog.csdn.net/qq_36455412/article/details/125347552
+
+1)首先，找到用户目录下的.condarc文件（C:\Users\username）。
+
+2)打开.condarc文件之后，添加或修改.condarc 中的 env_dirs 设置环境路径，按顺序第⼀个路径作为默认存储路径，搜索环境按先后顺序在各⽬录中查找。直接在.condarc添加：
+
+```txt
+envs_dirs:
+  - D:\Anaconda3\envs #你想要存储的路径
+```
+
