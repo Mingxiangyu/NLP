@@ -30,7 +30,7 @@ def wiki_replace(d):
     # return s
 
 i = 0
-f = codecs.open('zh_simplify/wiki.txt', 'w', encoding='utf-8')
+f = codecs.open('../wiki.txt', 'w', encoding='utf-8')
 w = tqdm(wiki, desc=u'已获取0篇文章')
 for d in w:
     #re.findall返回正则表达式匹配的所有字符串，用于去掉帮助页面和重定向页面;

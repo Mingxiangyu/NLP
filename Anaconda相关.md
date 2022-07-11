@@ -29,8 +29,8 @@ conda 4.10.3
 如果出现错误信息，则需核实是否出现以下情况：
 
 1. 使用的用户是否是安装Anaconda时的账户。
-
 2. 是否在`安装Anaconda之后重启了终端。`
+3. 在下载的时候64位怎么也下载不下来，想着用32位凑合一下，在这里奉劝各位不要，不然会在全部装好之后出现以下报错。明明都装好了，测试的时候出现ModuleNotFoundError的报错，No module named ‘torch’
 
 安装完成后去查看下环境变量，确认conda是否将变量添加进环境变量中，通过`sudo vi ~/.bash_profile`命令查看，成功添加效果如下
 
@@ -101,13 +101,19 @@ rm -rf ~/anaconda3
 
 **② Windows**
 
-控制面板 → 添加或删除程序 → 选择“Python X.X (Anaconda)” → 点击“删除程序”
+~~控制面板 → 添加或删除程序 → 选择“Python X.X (Anaconda)” → 点击“删除程序”~~
 
-注意：
+~~注意：~~
 
-Python X.X：即Python的版本，如：Python 3.6。
+~~Python X.X：即Python的版本，如：Python 3.6。~~
 
-Windows 10的删除有所不同。
+~~Windows 10的删除有所不同。~~
+
+直接卸载会有配置文件，注册表等残留
+
+- `conda install anaconda-clean`
+- `anaconda-clean --yes`
+- 进入安装目录执行 `Uninstall_Anaconda3.exe`
 
 # **管理环境**
 
@@ -713,6 +719,38 @@ conda config --remove channels 国内镜像源
 > conda config --remove channels [Index of /anaconda/pkgs/free/](https://link.zhihu.com/?target=https%3A//mirrors.ustc.edu.cn/anaconda/pkgs/free/)
 > conda config --remove channels [Index of /anaconda/pkgs/main/](https://link.zhihu.com/?target=https%3A//mirrors.ustc.edu.cn/anaconda/pkgs/main/)
 
+## 修改默认虚拟环境安装位置
+
+### 查看配置
+
+```
+conda config --show
+```
+
+`envs_dirs` 的第一项即为[虚拟环境](https://so.csdn.net/so/search?q=虚拟环境&spm=1001.2101.3001.7020)的默认位置-
+
+### 修改配置
+
+#### 添加 envs_dirs
+
+```
+conda config --add envs_dirs ~/.conda/envs
+```
+
+#### 删除 envs_dirs
+
+如果需要删除配置虚拟环境安装路径，可以使用以下语句进行删除
+
+```
+conda config --remove envs_dirs ~/.conda/envs
+```
+
+除了使用 conda 指令修改 envs_dirs 配置外，还可以手动修改配置文件内容，实现配置修改，Windows 系统下 配置文件为 C:\Users\Username\.condarc，Linux 系统下为 ~/.condarc。可以直接编辑该 .condarc 文件，在其中添加配置：
+
+> envs_dirs:
+>
+> ~/.conda/envs
+
 # 迁移包
 
 ## 将Python环境里的包导出成txt文件
@@ -753,7 +791,7 @@ pip install --no-index --find-links=<pack_path> -r requirements.txt
 
 # 可能会碰到的问题
 
-### 在执行`pip freeze > requirements.txt`时，碰到以下问题：
+## 在执行`pip freeze > requirements.txt`时，碰到以下问题：
 
 ```bash
 ERROR: Could not find a version that satisfies the requirement nvidia-ml-py==375.53.1 (from -r requirements.txt (line 61)) (from versions: 1.0, 2.285.1, 3.295.0, 4.304.2, 4.304.3, 4.304.4, 6.340.0, 7.346.0, 7.352.0, 10.418.84, 375.53)
@@ -765,7 +803,7 @@ ERROR: No matching distribution found for nvidia-ml-py==375.53.1 (from -r requir
 **解决方法：**
 到https://pypi.org/project/，去搜索一下你需要的包，然后重新安装一下、
 
-### pytorch下载不了
+## pytorch下载不了
 
 ```sh
 ERROR: Could not find a version that satisfies the requirement torch==1.1.0 (from -r requirements.txt (line 12)) (from versions: 0.1.2, 0.1.2.post1, 0.1.2.post2)
@@ -785,11 +823,37 @@ pytorch比较麻烦，通过清华源，或者pip源下载不到，需要到官�
 
 
 
-### 另一台无网络的服务器没有网络，怎么创建的虚拟环境呢
+## 另一台无网络的服务器没有网络，怎么创建的虚拟环境呢
 
 1）下载好Anaconda，然后复制过去安装，用anaconda的base环境。
 
 2）带一个无线网卡插上去，然后连接手机热点，用自己的流量跑
+
+
+
+## 安装或卸载anaconda 后打不开cmd
+
+打开注册表，Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor，删除 AutoRun 项
+
+
+
+## 下载时Solving environment: failed with initial frozen solve. Retrying with flexible solve.PackagesNotFoundError
+
+检查镜像源
+虽然上述博客的解决方案没用，但是更新命令收下了。
+
+更新conda到最新版本：`conda update -n base conda`
+再查一下conda版本：`conda -V`
+第二次更新conda到最新版本：`conda update -n base conda`
+第二次很重要！！！
+更新完后再查一下conda版本：`conda -V`
+然后执行：`conda update --all`
+
+
+
+## ModuleNotFoundError … No module named ‘torch’
+
+检查版本是否正确，如64位下载64位Anaconda。我把之前的32为卸载了重新装了64位的就没有问题了。
 
 
 
