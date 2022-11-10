@@ -1,83 +1,4 @@
-# 更换pip源
-
-> 国内的pip源
-
-阿里云
-
-```text
- http://mirrors.aliyun.com/pypi/simple/
-```
-
-中国科技大学
-
-```sh
-https://pypi.mirrors.ustc.edu.cn/simple/
-```
-
-豆瓣(douban) 
-
-```sh
-http://pypi.douban.com/simple/ 
-```
-
-清华大学 
-
-```sh
-https://pypi.tuna.tsinghua.edu.cn/simple/
-```
-
-中国科学技术大学 
-
-```sh
-http://pypi.mirrors.ustc.edu.cn/simple/
-```
-
-## （临时配置）使用方法很简单，直接 -i 加 url 即可！如下：
-
-```sh
-pip install web.py -i http://pypi.douban.com/simple
-```
-
-如果有如下报错：
-
-![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/1005188-20160824100208198-524213286.png)
-
-请使用命令：
-
-```sh
-pip install web.py -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
-```
-
-## 配置成默认源
-
-需要创建或修改配置文件（一般都是创建），
-
-linux的文件在`~/.pip/pip.conf`，
-
-windows在`%HOMEPATH%\pip\pip.ini`，
-
-修改内容为：
-
-```bash
-[global]
-index-url = http://pypi.douban.com/simple
-[install]
-trusted-host=pypi.douban.com
-```
-
-这样在使用pip来安装时，会默认调用该镜像。
-
-也可以使用读入文件进行安装：
-
-```python
-#!/usr/bin/python
-  
-import os
-  
-package = raw_input("Please input the package which you want to install!\n")
-command = "pip install %s -i http://pypi.mirrors.ustc.edu.cn/simple --trusted-host pypi.mirrors.ustc.edu.cn" % package
-os.system(command)
-```
+[TOC]
 
 # Python相关
 
@@ -122,6 +43,71 @@ pip search flask  #搜素flask安装包
 pip install pip -U
 ```
 
+## 更换pip源
+
+> 国内的pip源
+
+```bash
+http://mirrors.aliyun.com/pypi/simple/ #阿里云
+https://pypi.mirrors.ustc.edu.cn/simple/ #中国科技大学
+http://pypi.douban.com/simple/  #豆瓣(douban) 
+https://pypi.tuna.tsinghua.edu.cn/simple/ #清华大学 
+http://pypi.mirrors.ustc.edu.cn/simple/ #中国科学技术大学 
+```
+
+## （临时配置）使用方法很简单，直接 -i 加 url 即可！如下：
+
+```sh
+pip install web.py -i http://pypi.douban.com/simple
+```
+
+如果有如下报错：
+
+![img](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/1005188-20160824100208198-524213286.png)
+
+请使用命令：
+
+```sh
+pip install web.py -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+```
+
+## 配置成默认源
+
+需要创建或修改配置文件（一般都是创建），
+
+linux的文件在`~/.pip/pip.conf`，
+
+windows在`%HOMEPATH%\pip\pip.ini`，
+
+修改内容为：
+
+```bash
+[global]
+index-url = http://pypi.douban.com/simple
+[install]
+trusted-host=pypi.douban.com
+```
+
+或者
+
+ ```
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+ ```
+
+这样在使用pip来安装时，会默认调用该镜像。
+
+也可以使用读入文件进行安装：
+
+```python
+#!/usr/bin/python
+  
+import os
+  
+package = raw_input("Please input the package which you want to install!\n")
+command = "pip install %s -i http://pypi.mirrors.ustc.edu.cn/simple --trusted-host pypi.mirrors.ustc.edu.cn" % package
+os.system(command)
+```
+
 ## 修复pip
 
 ```python3
@@ -137,8 +123,7 @@ python -m pip install --upgrade pip  # 更新pip
 
 ```python3
 pip uninstall pillow 
-pip install pillow 
-easy_install Pillow 
+pip install pillow  
 ```
 
 ## pip安装包管理
@@ -149,6 +134,7 @@ pip purge #清除缓存
 pip remove #删除对应的缓存
 pip help #帮助
 pip install xxx #安装xxx包
+pip install ... --no-cache-dir #跳过缓存
 pip uninstall xxx #删除xxx包
 pip show xxx #展示指定的已安装的xxx包
 pip check xxx #检查xxx包的依赖是否合适
@@ -159,4 +145,55 @@ pip check xxx #检查xxx包的依赖是否合适
 ```python3
 which pip
 ```
+
+如果pip安装时出现问题并且看不到报错，可以尝试以下命令（debug形式运行install）
+
+```python
+pip install -vvv <package_name>   #package_name为你想安装的包名称，不带<>
+```
+
+## 清除缓存
+
+### linux缓存所在文件夹
+
+```bash
+cd ~/.cache/pip
+sudo rm -rf * #清除所有缓存
+```
+
+### win缓存所在文件夹
+
+```bash
+C:\Users\<user_name>\AppData\Local\pip\cache
+```
+
+## 用pip生成当前环境下的requirements文件
+
+```sh
+pip freeze > requirements.txt
+```
+
+## 用pip安装当前环境下的requirements文件
+
+```sh
+pip install -r requirements.txt
+```
+
+# 常见问题
+
+## 如果用pip提示找不到相关库，可以切换下用conda指令安装；
+
+## 如果用某个源下载速度慢，即可多切换下不同的镜像源试试，比如有时候用清华源只有10k，换个豆瓣源有2M多；
+
+## 如果提示连接超时，代理设置有问题的，可以检查下自己的vpn是否开启了全局，可改成PAC模式；
+
+## 如果出现“conda Collecting package metadata (current_repodata.json): failed”，说明当前设置的镜像源可能失效，可直接通过下面指令依次执行后，再重新安装你需要的包：
+
+~~~sh
+conda config --remove-key channels
+conda update conda
+conda update --all
+conda config --add channels conda-forge
+conda config --set channel_priority flexible
+~~~
 

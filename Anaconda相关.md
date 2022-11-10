@@ -29,8 +29,8 @@ conda 4.10.3
 如果出现错误信息，则需核实是否出现以下情况：
 
 1. 使用的用户是否是安装Anaconda时的账户。
-
 2. 是否在`安装Anaconda之后重启了终端。`
+3. 在下载的时候64位怎么也下载不下来，想着用32位凑合一下，在这里奉劝各位不要，不然会在全部装好之后出现以下报错。明明都装好了，测试的时候出现ModuleNotFoundError的报错，No module named ‘torch’
 
 安装完成后去查看下环境变量，确认conda是否将变量添加进环境变量中，通过`sudo vi ~/.bash_profile`命令查看，成功添加效果如下
 
@@ -65,6 +65,14 @@ unset __conda_setup
 conda update conda
 ```
 
+###   更新Anaconda到最新版
+
+​          [注意：在更新Anaconda前需要先更新conda]
+
+            ~~~
+conda update anaconda 
+            ~~~
+
 执行命令后，conda将会对版本进行比较并列出可以升级的版本。同时，也会告知用户其他相关包也会升级到相应版本。
 
 当较新的版本可以用于升级时，终端会显示Proceed ([y]/n)?，此时输入y即可进行升级。
@@ -93,13 +101,19 @@ rm -rf ~/anaconda3
 
 **② Windows**
 
-控制面板 → 添加或删除程序 → 选择“Python X.X (Anaconda)” → 点击“删除程序”
+~~控制面板 → 添加或删除程序 → 选择“Python X.X (Anaconda)” → 点击“删除程序”~~
 
-注意：
+~~注意：~~
 
-Python X.X：即Python的版本，如：Python 3.6。
+~~Python X.X：即Python的版本，如：Python 3.6。~~
 
-Windows 10的删除有所不同。
+~~Windows 10的删除有所不同。~~
+
+直接卸载会有配置文件，注册表等残留
+
+- `conda install anaconda-clean`
+- `anaconda-clean --yes`
+- 进入安装目录执行 `Uninstall_Anaconda3.exe`
 
 # **管理环境**
 
@@ -289,6 +303,16 @@ conda env create -f environment.yaml
 
 用分享的 YAML 文件来创建一摸一样的运行环境
 
+## 自动开启/关闭环境
+
+```sh
+conda activate   #默认激活base环境
+conda activate xxx  #激活xxx环境
+conda deactivate #关闭当前环境
+conda config --set auto_activate_base false  #关闭自动激活状态
+conda config --set auto_activate_base true  #关闭自动激活状态
+```
+
 # **管理包**
 
 ## 1. 查找可供安装的包版本
@@ -377,9 +401,15 @@ conda install <package_name>
 conda install pandas # 即在当前环境中安装pandas包。
 ```
 
-#### PackagesNotFoundError: The following packages are not available from current channels的解决办法
+### 清除Conda索引缓存*清理没有使用过的包*
 
-##### 解决方法一：将[conda](https://so.csdn.net/so/search?q=conda&spm=1001.2101.3001.7020)-forge添加到搜索路径上
+~~~
+conda clean -p
+~~~
+
+### PackagesNotFoundError: The following packages are not available from current channels的解决办法
+
+#### 解决方法一：将[conda](https://so.csdn.net/so/search?q=conda&spm=1001.2101.3001.7020)-forge添加到搜索路径上
 
 首先，当出现这种报错时，应该首先尝试使用以下命令将conda-forge channel添加到你的channel列表中
 
@@ -397,7 +427,7 @@ conda install 包名
 
 原因在于：channel可以看成是托管python包的服务器，当无法通过标准channel获得python包时，社区驱动的conda-forge通常是一个很好的地点。大部分问题都可以利用这条语句解决。
 
-##### 方法二：利用报错提示，进入annaconda网站利用命令解决
+#### 方法二：利用报错提示，进入annaconda网站利用命令解决
 
 当添加上述语句仍然出现错误，安装某个python包时（并不特别对于某个特定包，各种包有时都会出现这种情况 。会出现当前channel不可用，并报错：
 
@@ -459,7 +489,7 @@ and use the search bar at the top of the page.
 
 ![运行任意一条命令](https://gitee.com/ming-xiangyu/Imageshack/raw/master/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTU1MjU2Mg==,size_16,color_FFFFFF,t_70-20220314122534639.png)
 
-##### 方法三：进入annaconda网站利用包的安装包安装
+#### 方法三：进入annaconda网站利用包的安装包安装
 
 如果上述这些命令经过一一尝试都无效，那只有下载该python包对应的本地“***.bz2”本地文件，然后利用annaconda进行本地安装，需要点击上图的file，下载本机环境下对应的安装包：
 
@@ -619,7 +649,7 @@ conda update pandas numpy matplotlib #即更新pandas、numpy、matplotlib包。
 
 第二步：通过`conda clean -t`可以删除conda保存下来的tar包。
 
-```
+```bash
 conda clean -p      //删除没有用的包
 conda clean -t      //删除tar包
 conda clean -y --all //删除所有的安装包及cache
@@ -627,17 +657,34 @@ conda clean -y --all //删除所有的安装包及cache
 
 ## 6.配置TUNA国内镜像
 
- 在命令行下，输入：
+ 在命令行下，输入： (后添加的通道优先级更高)
 
 ```sh
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ 
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/conda
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud//pytorch/
 ```
 
-或
+或直接把下面文字拷贝到 `~/.condarc`中 (越靠前的优先级越高)
 
 ```sh
-conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/conda
+channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud//pytorch/
+show_channel_urls: true
+auto_activate_base: false  #关闭自动激活状态
 ```
 
  设置搜索时显示通道地址
@@ -671,6 +718,38 @@ conda config --remove channels 国内镜像源
 > 例如：删除中科大源
 > conda config --remove channels [Index of /anaconda/pkgs/free/](https://link.zhihu.com/?target=https%3A//mirrors.ustc.edu.cn/anaconda/pkgs/free/)
 > conda config --remove channels [Index of /anaconda/pkgs/main/](https://link.zhihu.com/?target=https%3A//mirrors.ustc.edu.cn/anaconda/pkgs/main/)
+
+## 修改默认虚拟环境安装位置
+
+### 查看配置
+
+```
+conda config --show
+```
+
+`envs_dirs` 的第一项即为[虚拟环境](https://so.csdn.net/so/search?q=虚拟环境&spm=1001.2101.3001.7020)的默认位置-
+
+### 修改配置
+
+#### 添加 envs_dirs
+
+```
+conda config --add envs_dirs ~/.conda/envs
+```
+
+#### 删除 envs_dirs
+
+如果需要删除配置虚拟环境安装路径，可以使用以下语句进行删除
+
+```
+conda config --remove envs_dirs ~/.conda/envs
+```
+
+除了使用 conda 指令修改 envs_dirs 配置外，还可以手动修改配置文件内容，实现配置修改，Windows 系统下 配置文件为 C:\Users\Username\.condarc，Linux 系统下为 ~/.condarc。可以直接编辑该 .condarc 文件，在其中添加配置：
+
+> envs_dirs:
+>
+> ~/.conda/envs
 
 # 迁移包
 
@@ -710,9 +789,9 @@ pip install --no-index --find-links=<pack_path> -r requirements.txt
 
 `<pack_path>`为本地包路径。包名两边不加尖括号“<>”。
 
-## 可能会碰到的问题
+# 可能会碰到的问题
 
-### 在执行`pip freeze > requirements.txt`时，碰到以下问题：
+## 在执行`pip freeze > requirements.txt`时，碰到以下问题：
 
 ```bash
 ERROR: Could not find a version that satisfies the requirement nvidia-ml-py==375.53.1 (from -r requirements.txt (line 61)) (from versions: 1.0, 2.285.1, 3.295.0, 4.304.2, 4.304.3, 4.304.4, 6.340.0, 7.346.0, 7.352.0, 10.418.84, 375.53)
@@ -724,7 +803,7 @@ ERROR: No matching distribution found for nvidia-ml-py==375.53.1 (from -r requir
 **解决方法：**
 到https://pypi.org/project/，去搜索一下你需要的包，然后重新安装一下、
 
-### pytorch下载不了
+## pytorch下载不了
 
 ```sh
 ERROR: Could not find a version that satisfies the requirement torch==1.1.0 (from -r requirements.txt (line 12)) (from versions: 0.1.2, 0.1.2.post1, 0.1.2.post2)
@@ -744,8 +823,60 @@ pytorch比较麻烦，通过清华源，或者pip源下载不到，需要到官�
 
 
 
-### 另一台无网络的服务器没有网络，怎么创建的虚拟环境呢
+## 另一台无网络的服务器没有网络，怎么创建的虚拟环境呢
 
 1）下载好Anaconda，然后复制过去安装，用anaconda的base环境。
 
 2）带一个无线网卡插上去，然后连接手机热点，用自己的流量跑
+
+
+
+## 安装或卸载anaconda 后打不开cmd
+
+打开注册表，Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor，删除 AutoRun 项
+
+
+
+## 下载时Solving environment: failed with initial frozen solve. Retrying with flexible solve.PackagesNotFoundError
+
+检查镜像源
+虽然上述博客的解决方案没用，但是更新命令收下了。
+
+更新conda到最新版本：`conda update -n base conda`
+再查一下conda版本：`conda -V`
+第二次更新conda到最新版本：`conda update -n base conda`
+第二次很重要！！！
+更新完后再查一下conda版本：`conda -V`
+然后执行：`conda update --all`
+
+
+
+## ModuleNotFoundError … No module named ‘torch’
+
+检查版本是否正确，如64位下载64位Anaconda。我把之前的32为卸载了重新装了64位的就没有问题了。
+
+
+
+### anaconda或conda不是内部命令
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190624104613684.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3poYXl1c2h1aQ==,size_16,color_FFFFFF,t_70)
+
+添加上图环境变量即可
+
+### 更改 Python 的 pip install 默认安装依赖路径
+
+[更改 Python 的 pip install 默认安装依赖路径](https://blog.csdn.net/mukvintt/article/details/80908951) https://blog.csdn.net/mukvintt/article/details/80908951
+
+### 改变conda虚拟环境的默认路径
+
+[改变conda虚拟环境的默认路径](https://blog.csdn.net/qq_36455412/article/details/125347552) https://blog.csdn.net/qq_36455412/article/details/125347552
+
+1)首先，找到用户目录下的.condarc文件（C:\Users\username）。
+
+2)打开.condarc文件之后，添加或修改.condarc 中的 env_dirs 设置环境路径，按顺序第⼀个路径作为默认存储路径，搜索环境按先后顺序在各⽬录中查找。直接在.condarc添加：
+
+```txt
+envs_dirs:
+  - D:\Anaconda3\envs #你想要存储的路径
+```
+
