@@ -69,9 +69,9 @@ conda update conda
 
 ​          [注意：在更新Anaconda前需要先更新conda]
 
-            ~~~
+~~~
 conda update anaconda 
-            ~~~
+~~~
 
 执行命令后，conda将会对版本进行比较并列出可以升级的版本。同时，也会告知用户其他相关包也会升级到相应版本。
 
@@ -802,6 +802,76 @@ ERROR: No matching distribution found for nvidia-ml-py==375.53.1 (from -r requir
 你需要的这个包太老了，导致网络上下载不了，所以需要重新安装一下这个包的最新版本
 **解决方法：**
 到https://pypi.org/project/，去搜索一下你需要的包，然后重新安装一下、
+
+## 明明可以通过`pip install <package_names>`是正常的但是`pip download <package_names>`时却提示`No matching distribution found for <package_names>`
+
+同时终端提示一下内容：
+
+~~~shell
+WARNING: The repository located at pypi.douban.com is not a trusted or secure host and is being ignored. If this repository is available via HTTPS we recommend you use HTTPS instead, otherwise you may silenc
+
+e this warning and allow it anyway with '--trusted-host pypi.douban.com'.
+
+ERROR: Could not find a version that satisfies the requirement  <package_names> (from versions: none)
+
+ERROR: No matching distribution found for  <package_names>
+~~~
+
+**原因一：**
+
+配置的`pip源`不是受信任的主机，所以在下载的时候忽略了该源
+
+**解决办法：**
+
+在执行命令后面添加 `--trusted-host <pip源地址>`就可以正常下载了，如：
+
+```sh
+pip dwonload pytest -d pack --trusted-host mirrors.aliyun.com
+```
+
+> ps ：--trusted-host pypi.douban.com 这是为了获得ssl证书的认证
+>
+> 常见pip镜像源（国内源）
+> 	清华：https://pypi.tuna.tsinghua.edu.cn/simple
+> 	阿里云：http://mirrors.aliyun.com/pypi/simple/
+> 	中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+> 	华中理工大学：http://pypi.hustunique.com/
+> 	山东理工大学：http://pypi.sdutlinux.org/
+> 	豆瓣：http://pypi.douban.com/simple/
+
+**原因二：**
+
+没有提供符合条件的二进制包
+
+**解决办法：**
+
+使用非二进制包安装 --no-binary=:all: <package_name>
+
+```
+pip download --no-binary=:all: tornado==6.0 -d pkg/
+```
+
+**原因三：**
+
+pip的版本过低，需要升级一下，可以执行以下命令进行尝试
+
+**解决办法：**
+
+更新pip版本
+
+```
+ python -m pip install --upgrade pip
+```
+
+**原因四：**
+
+检查下是否开启代理或者VPN，将其关闭再使用国内镜像进行尝试看看是否可以解决，我这边就是代理开启导致网络太慢而报错的。
+
+**解决办法：**
+
+关闭VPN
+
+
 
 ## pytorch下载不了
 
