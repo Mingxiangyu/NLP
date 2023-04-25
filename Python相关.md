@@ -276,6 +276,12 @@ ENTRYPOINT　　指定一个容器启动时要运行的命令。ENTRYPOINT的目
 ONBUILD　　当构建一个被继承的Dockerfile时运行命令，父镜像在被子继承后父镜像的onbuild被触发
 ~~~
 
+## 破解五秒盾
+
+~~~dockerfile
+docker run -d --name=flaresolverr -p 8191:8191 -e LOG_LEVEL=info --restart unless-stopped ghcr.io/flaresolverr/flaresolverr:latest
+~~~
+
 
 
 # 常见问题
